@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :deposits
+
   map.resources :cashes
 
   # The priority is based upon order of creation: first created -> highest priority.

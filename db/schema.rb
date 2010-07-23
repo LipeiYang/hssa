@@ -9,12 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100722175010) do
+ActiveRecord::Schema.define(:version => 20100723152829) do
 
   create_table "cashes", :force => true do |t|
     t.decimal  "dr",         :default => 0.0, :null => false
     t.decimal  "cr",         :default => 0.0, :null => false
     t.date     "date",                        :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "deposits", :force => true do |t|
+    t.date     "date",                        :null => false
+    t.string   "bank",                        :null => false
+    t.decimal  "dr",         :default => 0.0, :null => false
+    t.decimal  "cr",         :default => 0.0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

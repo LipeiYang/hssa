@@ -5,6 +5,7 @@
     <%= f.label :date %><br />
     <%= f.date_select :date, :discard_day=>true %>
   </p>
+  <%= render :partial => form_sub_item, :locals => { :f=>f }%>
   <p>
     <%= f.label :dr %><br />
     <%= f.text_field :dr %>

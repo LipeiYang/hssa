@@ -1,6 +1,6 @@
 <h1>Editing cash</h1>
 
-<%= render :partial => "templates/edit_form", :locals =>{ :data_src=>@cash } %>
+<%= render :partial => "templates/edit_form", :locals =>{ :data_src=>@cash, :form_sub_item=>nil } %>
 
 <%= link_to 'Show', @cash %> |
 <%= link_to 'Back', cashes_path %>
