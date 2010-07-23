@@ -1,0 +1,23 @@
+<p>
+  <b>Date:</b>
+  <%=h @deposit.date %>
+</p>
+
+<p>
+  <b>Bank:</b>
+  <%=h @deposit.bank %>
+</p>
+
+<p>
+  <b>Dr:</b>
+  <%=h @deposit.dr %>
+</p>
+
+<p>
+  <b>Cr:</b>
+  <%=h @deposit.cr %>
+</p>
+
+
+<%= link_to 'Edit', edit_deposit_path(@deposit) %> |
+<%= link_to 'Back', deposits_path %>
