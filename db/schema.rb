@@ -12,9 +12,9 @@
 ActiveRecord::Schema.define(:version => 20100722175010) do
 
   create_table "cashes", :force => true do |t|
-    t.decimal  "cr"
-    t.decimal  "dr"
-    t.date     "date"
+    t.decimal  "dr",         :default => 0.0, :null => false
+    t.decimal  "cr",         :default => 0.0, :null => false
+    t.date     "date",                        :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,9 +1,9 @@
 class CreateCashes < ActiveRecord::Migration
   def self.up
     create_table :cashes do |t|
-      t.decimal :cr
-      t.decimal :dr
-      t.date :date
+      t.decimal :dr, :default => 0, :scale => 2, :null => false
+      t.decimal :cr, :default => 0, :scale => 2, :null => false
+      t.date :date, :null => false
 
       t.timestamps
     end

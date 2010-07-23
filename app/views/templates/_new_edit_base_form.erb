@@ -1,0 +1,19 @@
+<% form_for(data_src) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date, :discard_day=>true %>
+  </p>
+  <p>
+    <%= f.label :dr %><br />
+    <%= f.text_field :dr %>
+  </p>
+  <p>
+    <%= f.label :cr %><br />
+    <%= f.text_field :cr %>
+  </p>
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>

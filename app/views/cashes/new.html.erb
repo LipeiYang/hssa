@@ -1,23 +1,5 @@
 <h1>New cash</h1>
 
-<% form_for(@cash) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :cr %><br />
-    <%= f.text_field :cr %>
-  </p>
-  <p>
-    <%= f.label :dr %><br />
-    <%= f.text_field :dr %>
-  </p>
-  <p>
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+<%= render :partial => "templates/new_form", :locals =>{ :data_src=>@cash } %>
 
 <%= link_to 'Back', cashes_path %>

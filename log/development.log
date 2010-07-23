@@ -24,3 +24,458 @@ Migrating to CreateCashes (20100722175010)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("cashes")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-23 01:53:07) [GET]
+
+ActionController::RoutingError (No route matches "/cash" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 01:53:28) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 266ms (View: 235, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 01:54:35) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#new (for 127.0.0.1 at 2010-07-23 01:54:37) [GET]
+Rendering template within layouts/cashes
+Rendering cashes/new
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://localhost/cashes/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "cashes"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100722175010'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "cashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cr" decimal DEFAULT 0 NOT NULL, "dr" decimal DEFAULT 0 NOT NULL, "date" date NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100722175010')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+
+
+Processing CashesController#new (for 127.0.0.1 at 2010-07-23 01:59:35) [GET]
+Rendering template within layouts/cashes
+Rendering cashes/new
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/cashes/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "cashes"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100722175010'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "cashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dr" decimal DEFAULT 0 NOT NULL, "cr" decimal DEFAULT 0 NOT NULL, "date" date NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100722175010')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+
+
+Processing CashesController#new (for 127.0.0.1 at 2010-07-23 02:01:58) [GET]
+Rendering template within layouts/cashes
+Rendering cashes/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/cashes/new]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 02:02:13) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 02:02:16) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/cashes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mDROP TABLE "cashes"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100722175010'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "cashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dr" decimal DEFAULT 0 NOT NULL, "cr" decimal DEFAULT 0 NOT NULL, "date" date NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100722175010')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 02:02:45) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 02:03:14) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#new (for 127.0.0.1 at 2010-07-23 02:03:16) [GET]
+Rendering template within layouts/cashes
+Rendering cashes/new
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/cashes/new]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 02:03:20) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 02:05:59) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 02:06:29) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#new (for 127.0.0.1 at 2010-07-23 02:06:30) [GET]
+Rendering template within layouts/cashes
+Rendering cashes/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/cashes/new]
+
+
+Processing CashesController#create (for 127.0.0.1 at 2010-07-23 02:06:50) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"HMsRFoCUqz6xTD5DvsUtlvJN+Kk68m+dkePIBQ1aMKs=", "cash"=>{"date(1i)"=>"2010", "date(2i)"=>"1", "dr"=>"1000", "date(3i)"=>"1", "cr"=>"0.0"}}
+  [4;36;1mCash Create (0.0ms)[0m   [0;1mINSERT INTO "cashes" ("updated_at", "dr", "date", "cr", "created_at") VALUES('2010-07-22 18:06:50', 1000.0, '2010-01-01', 0.0, '2010-07-22 18:06:50')[0m
+Redirected to http://localhost:3000/cashes/1
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/cashes]
+
+
+Processing CashesController#show (for 127.0.0.1 at 2010-07-23 02:06:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."id" = 1) [0m
+Rendering template within layouts/cashes
+Rendering cashes/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/cashes/1]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 02:06:53) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-23 21:24:29) [GET]
+
+ActionController::RoutingError (No route matches "/orders" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 21:24:38) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 328ms (View: 297, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#edit (for 127.0.0.1 at 2010-07-23 21:24:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."id" = 1) [0m
+Rendering template within layouts/cashes
+Rendering cashes/edit
+Rendered cashes/_new_edit_form (15.0ms)
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/cashes/1/edit]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 21:24:45) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#new (for 127.0.0.1 at 2010-07-23 21:24:54) [GET]
+Rendering template within layouts/cashes
+Rendering cashes/new
+Rendered cashes/_new_edit_form (31.0ms)
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/cashes/new]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 21:24:55) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 22:47:42) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#new (for 127.0.0.1 at 2010-07-23 22:47:44) [GET]
+Rendering template within layouts/cashes
+Rendering cashes/new
+Rendered cashes/_new_edit_form (32.0ms)
+Completed in 125ms (View: 109, DB: 0) | 200 OK [http://localhost/cashes/new]
+
+
+Processing CashesController#create (for 127.0.0.1 at 2010-07-23 22:48:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"EnlINSMzkENf+cDm/1jPj/lv8TTCbHF5l0me/+mkwA4=", "cash"=>{"date(1i)"=>"2010", "date(2i)"=>"7", "dr"=>"0.0", "date(3i)"=>"1", "cr"=>"0.0"}}
+  [4;35;1mCash Create (0.0ms)[0m   [0mINSERT INTO "cashes" ("updated_at", "dr", "date", "cr", "created_at") VALUES('2010-07-23 14:48:09', 0.0, '2010-07-01', 0.0, '2010-07-23 14:48:09')[0m
+Redirected to http://localhost:3000/cashes/2
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/cashes]
+
+
+Processing CashesController#show (for 127.0.0.1 at 2010-07-23 22:48:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."id" = 2) [0m
+Rendering template within layouts/cashes
+Rendering cashes/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/cashes/2]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 22:48:10) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#show (for 127.0.0.1 at 2010-07-23 22:48:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."id" = 1) [0m
+Rendering template within layouts/cashes
+Rendering cashes/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/cashes/1]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 22:48:28) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#edit (for 127.0.0.1 at 2010-07-23 22:53:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."id" = 1) [0m
+Rendering template within layouts/cashes
+Rendering cashes/edit
+Rendered cashes/_new_edit_form (16.0ms)
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/cashes/1/edit]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 22:53:18) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#new (for 127.0.0.1 at 2010-07-23 22:55:13) [GET]
+Rendering template within layouts/cashes
+Rendering cashes/new
+Rendered cashes/_new_edit_form (15.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/cashes/new]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 22:55:15) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#edit (for 127.0.0.1 at 2010-07-23 22:58:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."id" = 1) [0m
+Rendering template within layouts/cashes
+Rendering cashes/edit
+Rendered templates/_new_edit_form (0.0ms)
+Completed in 109ms (View: 109, DB: 0) | 200 OK [http://localhost/cashes/1/edit]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 22:58:14) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#edit (for 127.0.0.1 at 2010-07-23 23:04:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."id" = 1) [0m
+Rendering template within layouts/cashes
+Rendering cashes/edit
+Rendered templates/_new_edit_form (16.0ms)
+Rendered templates/_edit_form (16.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/cashes/1/edit]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 23:04:36) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#edit (for 127.0.0.1 at 2010-07-23 23:06:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."id" = 1) [0m
+Rendering template within layouts/cashes
+Rendering cashes/edit
+Rendered templates/_new_edit_base_form (15.0ms)
+Rendered templates/_edit_form (15.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/cashes/1/edit]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 23:06:27) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#new (for 127.0.0.1 at 2010-07-23 23:06:29) [GET]
+Rendering template within layouts/cashes
+Rendering cashes/new
+Rendered templates/_new_edit_base_form (16.0ms)
+Rendered templates/_new_form (16.0ms)
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/cashes/new]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-23 23:06:30) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/cashes]
