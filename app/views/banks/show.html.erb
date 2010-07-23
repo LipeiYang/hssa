@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @bank.name %>
+</p>
+
+<p>
+  <b>Seq:</b>
+  <%=h @bank.seq %>
+</p>
+
+<p>
+  <b>Visible:</b>
+  <%=h @bank.visible %>
+</p>
+
+
+<%= link_to 'Edit', edit_bank_path(@bank) %> |
+<%= link_to 'Back', banks_path %>

@@ -11,9 +11,9 @@
 <% @deposits.each do |deposit| %>
   <tr>
     <td><%=h deposit.date %></td>
-    <td><%=h deposit.bank %></td>
-    <td><%=h deposit.dr %></td>
-    <td><%=h deposit.cr %></td>
+    <td><%=h deposit.bank.name %></td>
+    <td><%=f deposit.dr %></td>
+    <td><%=f deposit.cr %></td>
     <td><%= link_to 'Show', deposit %></td>
     <td><%= link_to 'Edit', edit_deposit_path(deposit) %></td>
     <td><%= link_to 'Destroy', deposit, :confirm => 'Are you sure?', :method => :delete %></td>

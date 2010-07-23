@@ -1,4 +1,4 @@
  <p>
     <%= f.label :bank %><br />
-    <%= f.text_field :bank %>
+    <%= f.collection_select :bank_id, Bank.all(:order=>"seq"), :id, :name%>
  </p>

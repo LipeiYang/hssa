@@ -1071,3 +1071,435 @@ Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 01:03:06) [GET]
 Rendering template within layouts/deposits
 Rendering deposits/index
 Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/deposits]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+
+
+Processing DepositsController#edit (for 127.0.0.1 at 2010-07-24 01:04:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."id" = 2) [0m
+Rendering template within layouts/deposits
+Rendering deposits/edit
+Rendered deposits/_bank_form_sub_item (0.0ms)
+Rendered templates/_new_edit_base_form (16.0ms)
+Rendered templates/_edit_form (16.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/deposits/2/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+Migrating to CreateDeposits (20100723152829)
+Migrating to CreateBanks (20100723172034)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mCREATE TABLE "banks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seq" integer, "visible" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100723172034')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("deposits")[0m
+
+
+Processing BanksController#index (for 127.0.0.1 at 2010-07-24 01:22:17) [GET]
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" [0m
+Rendering template within layouts/banks
+Rendering banks/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/banks]
+
+
+Processing BanksController#new (for 127.0.0.1 at 2010-07-24 01:22:19) [GET]
+Rendering template within layouts/banks
+Rendering banks/new
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/banks/new]
+
+
+Processing BanksController#create (for 127.0.0.1 at 2010-07-24 01:22:35) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"EnlINSMzkENf+cDm/1jPj/lv8TTCbHF5l0me/+mkwA4=", "bank"=>{"visible"=>"0", "name"=>"Bank-A ", "seq"=>""}}
+  [4;36;1mBank Create (0.0ms)[0m   [0;1mINSERT INTO "banks" ("name", "visible", "updated_at", "seq", "created_at") VALUES('Bank-A ', 'f', '2010-07-23 17:22:36', NULL, '2010-07-23 17:22:36')[0m
+Redirected to http://localhost:3000/banks/1
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/banks]
+
+
+Processing BanksController#show (for 127.0.0.1 at 2010-07-24 01:22:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Rendering template within layouts/banks
+Rendering banks/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/banks/1]
+
+
+Processing BanksController#index (for 127.0.0.1 at 2010-07-24 01:22:37) [GET]
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" [0m
+Rendering template within layouts/banks
+Rendering banks/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/banks]
+
+
+Processing BanksController#edit (for 127.0.0.1 at 2010-07-24 01:22:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Rendering template within layouts/banks
+Rendering banks/edit
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/banks/1/edit]
+
+
+Processing BanksController#update (for 127.0.0.1 at 2010-07-24 01:22:43) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"EnlINSMzkENf+cDm/1jPj/lv8TTCbHF5l0me/+mkwA4=", "id"=>"1", "bank"=>{"visible"=>"1", "name"=>"Bank-A ", "seq"=>""}}
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Update (0.0ms)[0m   [0mUPDATE "banks" SET "visible" = 't', "updated_at" = '2010-07-23 17:22:43' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/banks/1
+Completed in 94ms (DB: 0) | 302 Found [http://localhost/banks/1]
+
+
+Processing BanksController#show (for 127.0.0.1 at 2010-07-24 01:22:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Rendering template within layouts/banks
+Rendering banks/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/banks/1]
+
+
+Processing BanksController#index (for 127.0.0.1 at 2010-07-24 01:22:46) [GET]
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" [0m
+Rendering template within layouts/banks
+Rendering banks/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/banks]
+
+
+Processing BanksController#new (for 127.0.0.1 at 2010-07-24 01:22:54) [GET]
+Rendering template within layouts/banks
+Rendering banks/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/banks/new]
+
+
+Processing BanksController#create (for 127.0.0.1 at 2010-07-24 01:23:13) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"EnlINSMzkENf+cDm/1jPj/lv8TTCbHF5l0me/+mkwA4=", "bank"=>{"visible"=>"1", "name"=>"Bank-B ", "seq"=>"2"}}
+  [4;36;1mBank Create (0.0ms)[0m   [0;1mINSERT INTO "banks" ("name", "visible", "updated_at", "seq", "created_at") VALUES('Bank-B ', 't', '2010-07-23 17:23:13', 2, '2010-07-23 17:23:13')[0m
+Redirected to http://localhost:3000/banks/2
+Completed in 172ms (DB: 0) | 302 Found [http://localhost/banks]
+
+
+Processing BanksController#show (for 127.0.0.1 at 2010-07-24 01:23:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+Rendering template within layouts/banks
+Rendering banks/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/banks/2]
+
+
+Processing BanksController#index (for 127.0.0.1 at 2010-07-24 01:23:16) [GET]
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" [0m
+Rendering template within layouts/banks
+Rendering banks/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/banks]
+
+
+Processing BanksController#edit (for 127.0.0.1 at 2010-07-24 01:23:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Rendering template within layouts/banks
+Rendering banks/edit
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/banks/1/edit]
+
+
+Processing BanksController#update (for 127.0.0.1 at 2010-07-24 01:23:20) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"EnlINSMzkENf+cDm/1jPj/lv8TTCbHF5l0me/+mkwA4=", "id"=>"1", "bank"=>{"visible"=>"1", "name"=>"Bank-A ", "seq"=>"1"}}
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Update (0.0ms)[0m   [0mUPDATE "banks" SET "seq" = 1, "updated_at" = '2010-07-23 17:23:20' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/banks/1
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/banks/1]
+
+
+Processing BanksController#show (for 127.0.0.1 at 2010-07-24 01:23:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Rendering template within layouts/banks
+Rendering banks/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/banks/1]
+
+
+Processing BanksController#index (for 127.0.0.1 at 2010-07-24 01:23:21) [GET]
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" [0m
+Rendering template within layouts/banks
+Rendering banks/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/banks]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 01:26:51) [GET]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-24 01:26:53) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/cashes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+Migrating to CreateDeposits (20100723152829)
+Migrating to CreateBanks (20100723172034)
+Migrating to AddBankIdRemoveBankToDeposit (20100723173004)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "deposits" ADD "bank_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_deposits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date NOT NULL, "bank" varchar(255) NOT NULL, "dr" decimal DEFAULT 0.0 NOT NULL, "cr" decimal DEFAULT 0.0 NOT NULL, "created_at" datetime, "updated_at" datetime, "bank_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("deposits")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "deposits"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "deposits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date NOT NULL, "dr" decimal DEFAULT 0.0 NOT NULL, "cr" decimal DEFAULT 0.0 NOT NULL, "created_at" datetime, "updated_at" datetime, "bank_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_deposits")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_deposits"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100723173004')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("deposits")[0m
+
+
+Processing DepositsController#edit (for 127.0.0.1 at 2010-07-24 01:34:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."id" = 1) [0m
+Rendering template within layouts/deposits
+Rendering deposits/edit
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" ORDER BY seq[0m
+Rendered deposits/_bank_form_sub_item (63.0ms)
+Rendered templates/_new_edit_base_form (78.0ms)
+Rendered templates/_edit_form (78.0ms)
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/deposits/1/edit]
+
+
+Processing DepositsController#update (for 127.0.0.1 at 2010-07-24 01:34:10) [PUT]
+  Parameters: {"deposit"=>{"date(1i)"=>"2010", "date(2i)"=>"7", "dr"=>"100000", "date(3i)"=>"1", "cr"=>"0", "bank_id"=>"1"}, "commit"=>"Update", "authenticity_token"=>"EnlINSMzkENf+cDm/1jPj/lv8TTCbHF5l0me/+mkwA4=", "id"=>"1"}
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."id" = 1) [0m
+  [4;35;1mDeposit Update (0.0ms)[0m   [0mUPDATE "deposits" SET "date" = '2010-07-01', "updated_at" = '2010-07-23 17:34:10', "bank_id" = 1 WHERE "id" = 1[0m
+Redirected to http://localhost:3000/deposits/1
+Completed in 141ms (DB: 0) | 302 Found [http://localhost/deposits/1]
+
+
+Processing DepositsController#show (for 127.0.0.1 at 2010-07-24 01:34:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."id" = 1) [0m
+Rendering template within layouts/deposits
+Rendering deposits/show
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/deposits/1]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 01:34:12) [GET]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing DepositsController#edit (for 127.0.0.1 at 2010-07-24 01:34:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."id" = 1) [0m
+Rendering template within layouts/deposits
+Rendering deposits/edit
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" ORDER BY seq[0m
+Rendered deposits/_bank_form_sub_item (15.0ms)
+Rendered templates/_new_edit_base_form (31.0ms)
+Rendered templates/_edit_form (31.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/deposits/1/edit]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 01:34:22) [GET]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 01:34:52) [GET]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #14 of app/views/deposits/index.html.erb:
+11: <% @deposits.each do |deposit| %>
+12:   <tr>
+13:     <td><%=h deposit.date %></td>
+14:     <td><%=h deposit.bank.name %></td>
+15:     <td><%=h deposit.dr %></td>
+16:     <td><%=h deposit.cr %></td>
+17:     <td><%= link_to 'Show', deposit %></td>
+
+    app/views/deposits/index.html.erb:14
+    app/views/deposits/index.html.erb:11:in `each'
+    app/views/deposits/index.html.erb:11
+    app/controllers/deposits_controller.rb:7:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSQLite3::SQLException: database schema has changed: SELECT * FROM "deposits" [0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" [0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" [0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."id" = 2) [0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."id" = 2) [0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."id" = 2) [0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."id" = 2) [0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."id" = 2) [0m
+  [4;35;1mDeposit Update (0.0ms)[0m   [0mUPDATE "deposits" SET "updated_at" = '2010-07-23 17:38:06', "bank_id" = 2 WHERE "id" = 2[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 01:38:17) [GET]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing DepositsController#show (for 127.0.0.1 at 2010-07-24 01:38:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."id" = 1) [0m
+Rendering template within layouts/deposits
+Rendering deposits/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/deposits/1]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 01:38:21) [GET]
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing DepositsController#edit (for 127.0.0.1 at 2010-07-24 01:38:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."id" = 1) [0m
+Rendering template within layouts/deposits
+Rendering deposits/edit
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" ORDER BY seq[0m
+Rendered deposits/_bank_form_sub_item (15.0ms)
+Rendered templates/_new_edit_base_form (125.0ms)
+Rendered templates/_edit_form (125.0ms)
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/deposits/1/edit]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 01:38:24) [GET]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing DepositsController#edit (for 127.0.0.1 at 2010-07-24 01:38:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."id" = 2) [0m
+Rendering template within layouts/deposits
+Rendering deposits/edit
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" ORDER BY seq[0m
+Rendered deposits/_bank_form_sub_item (16.0ms)
+Rendered templates/_new_edit_base_form (16.0ms)
+Rendered templates/_edit_form (16.0ms)
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/deposits/2/edit]
+
+
+Processing DepositsController#update (for 127.0.0.1 at 2010-07-24 01:38:40) [PUT]
+  Parameters: {"deposit"=>{"date(1i)"=>"2010", "date(2i)"=>"7", "dr"=>"150000", "date(3i)"=>"1", "cr"=>"0", "bank_id"=>"2"}, "commit"=>"Update", "authenticity_token"=>"EnlINSMzkENf+cDm/1jPj/lv8TTCbHF5l0me/+mkwA4=", "id"=>"2"}
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."id" = 2) [0m
+  [4;36;1mDeposit Update (0.0ms)[0m   [0;1mUPDATE "deposits" SET "dr" = 150000.0, "updated_at" = '2010-07-23 17:38:40' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/deposits/2
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/deposits/2]
+
+
+Processing DepositsController#show (for 127.0.0.1 at 2010-07-24 01:38:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."id" = 2) [0m
+Rendering template within layouts/deposits
+Rendering deposits/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/deposits/2]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 01:38:42) [GET]
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-24 01:57:51) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-24 02:00:01) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/cashes]
+
+
+Processing CashesController#show (for 127.0.0.1 at 2010-07-24 02:00:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."id" = 1) [0m
+Rendering template within layouts/cashes
+Rendering cashes/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/cashes/1]
+
+
+Processing CashesController#index (for 127.0.0.1 at 2010-07-24 02:00:09) [GET]
+  [4;35;1mCash Load (16.0ms)[0m   [0mSELECT * FROM "cashes" [0m
+Rendering template within layouts/cashes
+Rendering cashes/index
+Completed in 31ms (View: 15, DB: 16) | 200 OK [http://localhost/cashes]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 02:00:39) [GET]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://localhost/deposits]

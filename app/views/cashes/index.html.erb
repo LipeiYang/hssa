@@ -10,8 +10,8 @@
 <% @cashes.each do |cash| %>
   <tr>
     <td><%=h cash.date %></td>
-    <td><%=h cash.dr %></td>
-    <td><%=h cash.cr %></td>
+    <td><%=f cash.dr %></td>
+    <td><%=f cash.cr %></td>
     <td><%= link_to 'Show', cash %></td>
     <td><%= link_to 'Edit', edit_cash_path(cash) %></td>
     <td><%= link_to 'Destroy', cash, :confirm => 'Are you sure?', :method => :delete %></td>
