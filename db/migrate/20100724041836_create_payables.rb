@@ -1,10 +1,10 @@
 class CreatePayables < ActiveRecord::Migration
   def self.up
     create_table :payables do |t|
-      t.date :date
-      t.string :item
-      t.decimal :dr
-      t.decimal :cr
+      t.date :date, :null => false
+      t.string :item, :null => false
+      t.decimal :dr, :default => 0, :scale => 2, :null => false
+      t.decimal :cr, :default => 0, :scale => 2, :null => false
 
       t.timestamps
     end

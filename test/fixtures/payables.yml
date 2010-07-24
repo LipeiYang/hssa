@@ -1,13 +1,19 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  date: 2010-07-24
-  item: MyString
-  dr: 9.99
-  cr: 9.99
+  date: 2010-01-01
+  item: Due to A
+  dr: 0
+  cr: 11000
 
 two:
-  date: 2010-07-24
-  item: MyString
-  dr: 9.99
-  cr: 9.99
+  date: 2010-01-01
+  item: Due to B
+  dr: 0
+  cr: 10000
+
+three:
+  date: 2010-01-01
+  item: Due to C
+  dr: 0
+  cr: 0

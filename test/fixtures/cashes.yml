@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  cr: 9.99
-  dr: 9.99
-  date: 2010-07-23
+  date: 2010-01-01
+  dr: 1000
+  cr: 0
 
 two:
-  cr: 9.99
-  dr: 9.99
-  date: 2010-07-23
+  date: 2010-01-01
+  dr: 5000
+  cr: 2000

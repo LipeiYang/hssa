@@ -1,11 +1,16 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  name: Company A
   seq: 1
-  visible: false
+  visible: true
 
 two:
-  name: MyString
-  seq: 1
-  visible: false
+  name: Company B
+  seq: 2
+  visible: true
+
+three:
+  name: Company C
+  seq: 3
+  visible: true

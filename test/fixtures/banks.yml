@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  name: Bank A
   seq: 1
-  visible: false
+  visible: true
 
 two:
-  name: MyString
-  seq: 1
-  visible: false
+  name: Bank B
+  seq: 2
+  visible: true

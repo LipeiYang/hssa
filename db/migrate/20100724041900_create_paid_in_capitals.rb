@@ -1,9 +1,9 @@
 class CreatePaidInCapitals < ActiveRecord::Migration
   def self.up
     create_table :paid_in_capitals do |t|
-      t.date :date
-      t.decimal :dr
-      t.decimal :cr
+      t.date :date, :null => false
+      t.decimal :dr, :default => 0, :scale => 2, :null => false
+      t.decimal :cr, :default => 0, :scale => 2, :null => false
 
       t.timestamps
     end

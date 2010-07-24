@@ -38,3 +38,850 @@ Rendering deposits/index
   [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
   [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
 Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-24 12:42:18) [GET]
+
+ActionController::RoutingError (No route matches "/companys" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-07-24 12:42:24) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSQLite3::SQLException: no such table: companies: SELECT * FROM "companies" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: companies: SELECT * FROM "companies" ):
+  app/controllers/companies_controller.rb:5:in `index'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+Migrating to CreateDeposits (20100723152829)
+Migrating to CreateBanks (20100723172034)
+Migrating to AddBankIdRemoveBankToDeposit (20100723173004)
+Migrating to CreateCompanies (20100724041733)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seq" integer, "visible" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724041733')[0m
+Migrating to CreateMaterails (20100724041801)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "materails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seq" integer, "visible" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724041801')[0m
+Migrating to CreateReceivables (20100724041812)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "receivables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "company_id" integer, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724041812')[0m
+Migrating to CreateInventories (20100724041824)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "inventories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "materail_id" integer, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724041824')[0m
+Migrating to CreatePayables (20100724041836)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "payables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "item" varchar(255), "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724041836')[0m
+Migrating to CreateShortTermDebts (20100724041848)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "short_term_debts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724041848')[0m
+Migrating to CreatePaidInCapitals (20100724041900)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "paid_in_capitals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724041900')[0m
+Migrating to CreateSales (20100724041912)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "sales" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724041912')[0m
+Migrating to CreateCogs (20100724041923)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "cogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724041923')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("cogs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("deposits")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("inventories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("materails")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("paid_in_capitals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("payables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("receivables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sales")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("short_term_debts")[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-07-24 12:43:00) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/companies]
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2010-07-24 12:43:02) [GET]
+Rendering template within layouts/companies
+Rendering companies/new
+Rendered templates/item/_create_edit_base_form (16.0ms)
+Rendered templates/item/_create_form (16.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2010-07-24 12:43:11) [POST]
+  Parameters: {"company"=>{"visible"=>"1", "name"=>"Company---A ", "seq"=>"1"}, "commit"=>"Create", "authenticity_token"=>"e1V9sjWu6y/Ud0umlcXprQR8akNKuAkfi0yITuGaXHg="}
+  [4;35;1mCompany Create (0.0ms)[0m   [0mINSERT INTO "companies" ("name", "visible", "updated_at", "seq", "created_at") VALUES('Company---A ', 't', '2010-07-24 04:43:12', 1, '2010-07-24 04:43:12')[0m
+Redirected to http://localhost:3000/companies/1
+Completed in 156ms (DB: 0) | 302 Found [http://localhost/companies]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-07-24 12:43:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/companies/1]
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-07-24 12:43:14) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/companies]
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2010-07-24 12:43:24) [GET]
+Rendering template within layouts/companies
+Rendering companies/new
+Rendered templates/item/_create_edit_base_form (0.0ms)
+Rendered templates/item/_create_form (0.0ms)
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2010-07-24 12:43:28) [POST]
+  Parameters: {"company"=>{"visible"=>"1", "name"=>"Company---B ", "seq"=>"2"}, "commit"=>"Create", "authenticity_token"=>"e1V9sjWu6y/Ud0umlcXprQR8akNKuAkfi0yITuGaXHg="}
+  [4;36;1mCompany Create (0.0ms)[0m   [0;1mINSERT INTO "companies" ("name", "visible", "updated_at", "seq", "created_at") VALUES('Company---B ', 't', '2010-07-24 04:43:28', 2, '2010-07-24 04:43:28')[0m
+Redirected to http://localhost:3000/companies/2
+Completed in 94ms (DB: 0) | 302 Found [http://localhost/companies]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-07-24 12:43:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/companies/2]
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-07-24 12:43:30) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/companies]
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2010-07-24 12:43:32) [GET]
+Rendering template within layouts/companies
+Rendering companies/new
+Rendered templates/item/_create_edit_base_form (0.0ms)
+Rendered templates/item/_create_form (0.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2010-07-24 12:43:42) [POST]
+  Parameters: {"company"=>{"visible"=>"1", "name"=>"Company---C ", "seq"=>"3"}, "commit"=>"Create", "authenticity_token"=>"e1V9sjWu6y/Ud0umlcXprQR8akNKuAkfi0yITuGaXHg="}
+  [4;35;1mCompany Create (0.0ms)[0m   [0mINSERT INTO "companies" ("name", "visible", "updated_at", "seq", "created_at") VALUES('Company---C ', 't', '2010-07-24 04:43:42', 3, '2010-07-24 04:43:42')[0m
+Redirected to http://localhost:3000/companies/3
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/companies]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-07-24 12:43:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/3]
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-07-24 12:43:44) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-07-24 12:43:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Rendered templates/item/_create_edit_base_form (0.0ms)
+Rendered templates/item/_edit_form (16.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/1/edit]
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-07-24 12:43:54) [PUT]
+  Parameters: {"company"=>{"visible"=>"1", "name"=>"Company A ", "seq"=>"1"}, "commit"=>"Update", "authenticity_token"=>"e1V9sjWu6y/Ud0umlcXprQR8akNKuAkfi0yITuGaXHg=", "id"=>"1"}
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mCompany Update (0.0ms)[0m   [0;1mUPDATE "companies" SET "name" = 'Company A ', "updated_at" = '2010-07-24 04:43:54' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/companies/1
+Completed in 94ms (DB: 0) | 302 Found [http://localhost/companies/1]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-07-24 12:43:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/companies/1]
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-07-24 12:43:56) [GET]
+  [4;36;1mCompany Load (16.0ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 125ms (View: 94, DB: 16) | 200 OK [http://localhost/companies]
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-07-24 12:43:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Rendered templates/item/_create_edit_base_form (16.0ms)
+Rendered templates/item/_edit_form (16.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/2/edit]
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-07-24 12:44:01) [PUT]
+  Parameters: {"company"=>{"visible"=>"1", "name"=>"Company B ", "seq"=>"2"}, "commit"=>"Update", "authenticity_token"=>"e1V9sjWu6y/Ud0umlcXprQR8akNKuAkfi0yITuGaXHg=", "id"=>"2"}
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Update (16.0ms)[0m   [0mUPDATE "companies" SET "name" = 'Company B ', "updated_at" = '2010-07-24 04:44:01' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/companies/2
+Completed in 94ms (DB: 16) | 302 Found [http://localhost/companies/2]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-07-24 12:44:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/companies/2]
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-07-24 12:44:03) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-07-24 12:44:04) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Rendered templates/item/_create_edit_base_form (15.0ms)
+Rendered templates/item/_edit_form (15.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/3/edit]
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-07-24 12:44:08) [PUT]
+  Parameters: {"company"=>{"visible"=>"1", "name"=>"Company C ", "seq"=>"3"}, "commit"=>"Update", "authenticity_token"=>"e1V9sjWu6y/Ud0umlcXprQR8akNKuAkfi0yITuGaXHg=", "id"=>"3"}
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mCompany Update (0.0ms)[0m   [0;1mUPDATE "companies" SET "name" = 'Company C ', "updated_at" = '2010-07-24 04:44:08' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/companies/3
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/companies/3]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-07-24 12:44:08) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/3]
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-07-24 12:44:09) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/companies]
+
+
+Processing MaterailsController#index (for 127.0.0.1 at 2010-07-24 12:45:28) [GET]
+  [4;35;1mMaterail Load (0.0ms)[0m   [0mSELECT * FROM "materails" [0m
+Rendering template within layouts/materails
+Rendering materails/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/materails]
+
+
+Processing MaterailsController#new (for 127.0.0.1 at 2010-07-24 12:45:30) [GET]
+Rendering template within layouts/materails
+Rendering materails/new
+Rendered templates/item/_create_edit_base_form (16.0ms)
+Rendered templates/item/_create_form (16.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/materails/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+Migrating to CreateDeposits (20100723152829)
+Migrating to CreateBanks (20100723172034)
+Migrating to AddBankIdRemoveBankToDeposit (20100723173004)
+Migrating to CreateCompanies (20100724041733)
+Migrating to CreateReceivables (20100724041812)
+Migrating to CreatePayables (20100724041836)
+Migrating to CreateShortTermDebts (20100724041848)
+Migrating to CreatePaidInCapitals (20100724041900)
+Migrating to CreateSales (20100724041912)
+Migrating to CreateCogs (20100724041923)
+Migrating to CreateMaterials (20100724044825)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seq" integer, "visible" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724044825')[0m
+Migrating to CreateInventories (20100724044836)
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "inventories" already exists: CREATE TABLE "inventories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "material_id" integer, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+Migrating to CreateDeposits (20100723152829)
+Migrating to CreateBanks (20100723172034)
+Migrating to AddBankIdRemoveBankToDeposit (20100723173004)
+Migrating to CreateCompanies (20100724041733)
+Migrating to CreateReceivables (20100724041812)
+Migrating to CreatePayables (20100724041836)
+Migrating to CreateShortTermDebts (20100724041848)
+Migrating to CreatePaidInCapitals (20100724041900)
+Migrating to CreateSales (20100724041912)
+Migrating to CreateCogs (20100724041923)
+Migrating to CreateMaterials (20100724044825)
+Migrating to CreateInventories (20100724044836)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "materails"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "inventories"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "inventories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "material_id" integer, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724044836')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("cogs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("deposits")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("inventories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("materials")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("paid_in_capitals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("payables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("receivables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sales")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("short_term_debts")[0m
+
+
+Processing MaterialsController#index (for 127.0.0.1 at 2010-07-24 12:55:07) [GET]
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" [0m
+Rendering template within layouts/materials
+Rendering materials/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/materials]
+
+
+Processing MaterialsController#new (for 127.0.0.1 at 2010-07-24 12:55:08) [GET]
+Rendering template within layouts/materials
+Rendering materials/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/materials/new]
+
+
+Processing MaterialsController#create (for 127.0.0.1 at 2010-07-24 12:55:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"e1V9sjWu6y/Ud0umlcXprQR8akNKuAkfi0yITuGaXHg=", "material"=>{"visible"=>"1", "name"=>"Raw Materials A ", "seq"=>"1"}}
+  [4;35;1mMaterial Create (0.0ms)[0m   [0mINSERT INTO "materials" ("name", "visible", "updated_at", "seq", "created_at") VALUES('Raw Materials A ', 't', '2010-07-24 04:55:28', 1, '2010-07-24 04:55:28')[0m
+Redirected to http://localhost:3000/materials/1
+Completed in 141ms (DB: 0) | 302 Found [http://localhost/materials]
+
+
+Processing MaterialsController#show (for 127.0.0.1 at 2010-07-24 12:55:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+Rendering template within layouts/materials
+Rendering materials/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/materials/1]
+
+
+Processing MaterialsController#index (for 127.0.0.1 at 2010-07-24 12:55:33) [GET]
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" [0m
+Rendering template within layouts/materials
+Rendering materials/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/materials]
+
+
+Processing MaterialsController#new (for 127.0.0.1 at 2010-07-24 12:55:35) [GET]
+Rendering template within layouts/materials
+Rendering materials/new
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/materials/new]
+
+
+Processing MaterialsController#create (for 127.0.0.1 at 2010-07-24 12:55:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"e1V9sjWu6y/Ud0umlcXprQR8akNKuAkfi0yITuGaXHg=", "material"=>{"visible"=>"1", "name"=>"Raw Materials B", "seq"=>"2"}}
+  [4;36;1mMaterial Create (0.0ms)[0m   [0;1mINSERT INTO "materials" ("name", "visible", "updated_at", "seq", "created_at") VALUES('Raw Materials B', 't', '2010-07-24 04:55:41', 2, '2010-07-24 04:55:41')[0m
+Redirected to http://localhost:3000/materials/2
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/materials]
+
+
+Processing MaterialsController#show (for 127.0.0.1 at 2010-07-24 12:55:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Rendering template within layouts/materials
+Rendering materials/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/materials/2]
+
+
+Processing MaterialsController#index (for 127.0.0.1 at 2010-07-24 12:55:43) [GET]
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" [0m
+Rendering template within layouts/materials
+Rendering materials/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/materials]
+
+
+Processing MaterialsController#edit (for 127.0.0.1 at 2010-07-24 12:56:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+Rendering template within layouts/materials
+Rendering materials/edit
+Rendered templates/item/_create_edit_base_form (15.0ms)
+Rendered templates/item/_edit_form (15.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/materials/1/edit]
+
+
+Processing MaterialsController#index (for 127.0.0.1 at 2010-07-24 12:56:52) [GET]
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" [0m
+Rendering template within layouts/materials
+Rendering materials/index
+Completed in 94ms (View: 94, DB: 0) | 200 OK [http://localhost/materials]
+
+
+Processing MaterialsController#new (for 127.0.0.1 at 2010-07-24 12:56:53) [GET]
+Rendering template within layouts/materials
+Rendering materials/new
+Rendered templates/item/_create_edit_base_form (0.0ms)
+Rendered templates/item/_create_form (0.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/materials/new]
+
+
+Processing MaterialsController#index (for 127.0.0.1 at 2010-07-24 12:56:54) [GET]
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" [0m
+Rendering template within layouts/materials
+Rendering materials/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/materials]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+Migrating to CreateDeposits (20100723152829)
+Migrating to CreateBanks (20100723172034)
+Migrating to AddBankIdRemoveBankToDeposit (20100723173004)
+Migrating to CreateCompanies (20100724041733)
+Migrating to CreateReceivables (20100724041812)
+Migrating to CreatePayables (20100724041836)
+Migrating to CreateShortTermDebts (20100724041848)
+Migrating to CreatePaidInCapitals (20100724041900)
+Migrating to CreateSales (20100724041912)
+Migrating to CreateMaterials (20100724044825)
+Migrating to CreateInventories (20100724044836)
+Migrating to CreateGoodsCosts (20100724050423)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "cogs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "goods_costs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100724050423')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("banks")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("cashes")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("deposits")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("goods_costs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("inventories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("materials")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("paid_in_capitals")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("payables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("receivables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sales")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("short_term_debts")[0m
+
+
+Processing GoodsCostsController#index (for 127.0.0.1 at 2010-07-24 13:06:36) [GET]
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" [0m
+Rendering template within layouts/goods_costs
+Rendering goods_costs/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/goods_costs]
+
+
+Processing GoodsCostsController#new (for 127.0.0.1 at 2010-07-24 13:06:37) [GET]
+Rendering template within layouts/goods_costs
+Rendering goods_costs/new
+Rendered templates/entity/_create_edit_base_form (16.0ms)
+Rendered templates/entity/_create_form (16.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/goods_costs/new]
+
+
+Processing SalesController#index (for 127.0.0.1 at 2010-07-24 13:32:51) [GET]
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" [0m
+Rendering template within layouts/sales
+Rendering sales/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/sales]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mDROP TABLE "banks"[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE "banks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seq" integer, "visible" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (79.0ms)[0m   [0mDROP TABLE "cashes"[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mCREATE TABLE "cashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dr" decimal DEFAULT 0.0 NOT NULL, "cr" decimal DEFAULT 0.0 NOT NULL, "date" date NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mDROP TABLE "companies"[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seq" integer, "visible" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mDROP TABLE "deposits"[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE "deposits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date NOT NULL, "dr" decimal DEFAULT 0.0 NOT NULL, "cr" decimal DEFAULT 0.0 NOT NULL, "created_at" datetime, "updated_at" datetime, "bank_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (79.0ms)[0m   [0;1mDROP TABLE "goods_costs"[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE "goods_costs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mDROP TABLE "inventories"[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE "inventories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "material_id" integer, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mDROP TABLE "materials"[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE TABLE "materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seq" integer, "visible" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mDROP TABLE "paid_in_capitals"[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE "paid_in_capitals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mDROP TABLE "payables"[0m
+  [4;35;1mSQL (79.0ms)[0m   [0mCREATE TABLE "payables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "item" varchar(255), "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mDROP TABLE "receivables"[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE "receivables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "company_id" integer, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (141.0ms)[0m   [0;1mDROP TABLE "sales"[0m
+  [4;35;1mSQL (109.0ms)[0m   [0mCREATE TABLE "sales" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mDROP TABLE "short_term_debts"[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE "short_term_debts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (16.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+
+
+Processing SalesController#edit (for 127.0.0.1 at 2010-07-24 13:49:14) [GET]
+  Parameters: {"id"=>"298486374"}
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."id" = 298486374) [0m
+Rendering template within layouts/sales
+Rendering sales/edit
+Completed in 93ms (View: 93, DB: 0) | 200 OK [http://localhost/sales/298486374/edit]
+
+
+Processing SalesController#index (for 127.0.0.1 at 2010-07-24 13:49:15) [GET]
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" [0m
+Rendering template within layouts/sales
+Rendering sales/index
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://localhost/sales]
+
+
+Processing SalesController#new (for 127.0.0.1 at 2010-07-24 13:49:16) [GET]
+Rendering template within layouts/sales
+Rendering sales/new
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/sales/new]
+
+
+Processing SalesController#index (for 127.0.0.1 at 2010-07-24 13:49:18) [GET]
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" [0m
+Rendering template within layouts/sales
+Rendering sales/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/sales]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGoodsCosts (20100724050423)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "goods_costs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100724050423'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("companies")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("deposits")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("inventories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("materials")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("paid_in_capitals")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("payables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("receivables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sales")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("short_term_debts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+Migrating to CreateDeposits (20100723152829)
+Migrating to CreateBanks (20100723172034)
+Migrating to AddBankIdRemoveBankToDeposit (20100723173004)
+Migrating to CreateCompanies (20100724041733)
+Migrating to CreateReceivables (20100724041812)
+Migrating to CreatePayables (20100724041836)
+Migrating to CreateShortTermDebts (20100724041848)
+Migrating to CreatePaidInCapitals (20100724041900)
+Migrating to CreateSales (20100724041912)
+Migrating to CreateMaterials (20100724044825)
+Migrating to CreateInventories (20100724044836)
+Migrating to CreateGoodsCosts (20100724050423)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "goods_costs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date NOT NULL, "dr" decimal DEFAULT 0 NOT NULL, "cr" decimal DEFAULT 0 NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724050423')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("companies")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("deposits")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("goods_costs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("inventories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("materials")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("paid_in_capitals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("payables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("receivables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sales")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("short_term_debts")[0m
+
+
+Processing SalesController#new (for 127.0.0.1 at 2010-07-24 13:50:21) [GET]
+Rendering template within layouts/sales
+Rendering sales/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/sales/new]
+
+
+Processing SalesController#index (for 127.0.0.1 at 2010-07-24 13:50:22) [GET]
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" [0m
+Rendering template within layouts/sales
+Rendering sales/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/sales]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE TABLE "banks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seq" integer, "visible" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE TABLE "cashes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dr" decimal DEFAULT 0.0 NOT NULL, "cr" decimal DEFAULT 0.0 NOT NULL, "date" date NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seq" integer, "visible" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE "deposits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date NOT NULL, "dr" decimal DEFAULT 0.0 NOT NULL, "cr" decimal DEFAULT 0.0 NOT NULL, "created_at" datetime, "updated_at" datetime, "bank_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mCREATE TABLE "goods_costs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date NOT NULL, "dr" decimal DEFAULT 0.0 NOT NULL, "cr" decimal DEFAULT 0.0 NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mCREATE TABLE "inventories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "material_id" integer, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCREATE TABLE "materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seq" integer, "visible" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mCREATE TABLE "paid_in_capitals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE "payables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "item" varchar(255), "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE "receivables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "company_id" integer, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE "sales" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mCREATE TABLE "short_term_debts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "dr" decimal, "cr" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100724050423')[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100722175010')[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100723152829')[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100723172034')[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100723173004')[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100724041733')[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100724041812')[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100724041836')[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100724041848')[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100724041900')[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100724041912')[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100724044825')[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100724044836')[0m
+
+
+Processing SalesController#index (for 127.0.0.1 at 2010-07-24 13:51:47) [GET]
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" [0m
+Rendering template within layouts/sales
+Rendering sales/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/sales]
+
+
+Processing SalesController#index (for 127.0.0.1 at 2010-07-24 13:51:49) [GET]
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" [0m
+Rendering template within layouts/sales
+Rendering sales/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/sales]
+
+
+Processing SalesController#new (for 127.0.0.1 at 2010-07-24 13:51:50) [GET]
+Rendering template within layouts/sales
+Rendering sales/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/sales/new]
+
+
+Processing SalesController#index (for 127.0.0.1 at 2010-07-24 13:51:54) [GET]
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" [0m
+Rendering template within layouts/sales
+Rendering sales/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/sales]
+
+
+Processing SalesController#index (for 127.0.0.1 at 2010-07-24 13:52:28) [GET]
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" [0m
+Rendering template within layouts/sales
+Rendering sales/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/sales]

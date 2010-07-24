@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  name: Raw Materials A
   seq: 1
-  visible: false
+  visible: true
 
 two:
-  name: MyString
-  seq: 1
-  visible: false
+  name: Raw Materials B
+  seq: 2
+  visible: true

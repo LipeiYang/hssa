@@ -1,6 +1,6 @@
-class CreateBanks < ActiveRecord::Migration
+class CreateMaterials < ActiveRecord::Migration
   def self.up
-    create_table :banks do |t|
+    create_table :materials do |t|
       t.string :name, :null => false
       t.integer :seq
       t.boolean :visible
@@ -10,6 +10,6 @@ class CreateBanks < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :banks
+    drop_table :materials
   end
 end

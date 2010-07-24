@@ -1,24 +1,6 @@
 <h1>Editing company</h1>
 
-<% form_for(@company) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :seq %><br />
-    <%= f.text_field :seq %>
-  </p>
-  <p>
-    <%= f.label :visible %><br />
-    <%= f.check_box :visible %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render :partial => "templates/item/edit_form", :locals =>{ :data_src=>@company } %>
 
 <%= link_to 'Show', @company %> |
 <%= link_to 'Back', companies_path %>

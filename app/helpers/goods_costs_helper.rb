@@ -1,0 +1,2 @@
+module GoodsCostsHelper
+end

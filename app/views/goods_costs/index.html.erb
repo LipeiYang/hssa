@@ -1,0 +1,24 @@
+<h1>Listing goods_costs</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Dr</th>
+    <th>Cr</th>
+  </tr>
+
+<% @goods_costs.each do |goods_cost| %>
+  <tr>
+    <td><%=h goods_cost.date %></td>
+    <td><%=h goods_cost.dr %></td>
+    <td><%=h goods_cost.cr %></td>
+    <td><%= link_to 'Show', goods_cost %></td>
+    <td><%= link_to 'Edit', edit_goods_cost_path(goods_cost) %></td>
+    <td><%= link_to 'Destroy', goods_cost, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New goods_cost', new_goods_cost_path %>

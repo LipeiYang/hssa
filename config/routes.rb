@@ -1,5 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :cogs
+  map.resources :goods_costs
+
+  map.resources :inventories
+
+  map.resources :materials
 
   map.resources :sales
 
@@ -9,11 +13,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :payables
 
-  map.resources :inventories
-
   map.resources :receivables
-
-  map.resources :materails
 
   map.resources :companies
 

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100723173004) do
+ActiveRecord::Schema.define(:version => 20100724050423) do
 
   create_table "banks", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(:version => 20100723173004) do
     t.datetime "updated_at"
   end
 
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.integer  "seq"
+    t.boolean  "visible"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "deposits", :force => true do |t|
     t.date     "date",                        :null => false
     t.decimal  "dr",         :default => 0.0, :null => false
@@ -34,6 +42,73 @@ ActiveRecord::Schema.define(:version => 20100723173004) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "bank_id"
+  end
+
+  create_table "goods_costs", :force => true do |t|
+    t.date     "date",                        :null => false
+    t.decimal  "dr",         :default => 0.0, :null => false
+    t.decimal  "cr",         :default => 0.0, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "inventories", :force => true do |t|
+    t.date     "date"
+    t.integer  "material_id"
+    t.decimal  "dr"
+    t.decimal  "cr"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "materials", :force => true do |t|
+    t.string   "name"
+    t.integer  "seq"
+    t.boolean  "visible"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "paid_in_capitals", :force => true do |t|
+    t.date     "date"
+    t.decimal  "dr"
+    t.decimal  "cr"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payables", :force => true do |t|
+    t.date     "date"
+    t.string   "item"
+    t.decimal  "dr"
+    t.decimal  "cr"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "receivables", :force => true do |t|
+    t.date     "date"
+    t.integer  "company_id"
+    t.decimal  "dr"
+    t.decimal  "cr"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sales", :force => true do |t|
+    t.date     "date"
+    t.decimal  "dr"
+    t.decimal  "cr"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "short_term_debts", :force => true do |t|
+    t.date     "date"
+    t.decimal  "dr"
+    t.decimal  "cr"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
