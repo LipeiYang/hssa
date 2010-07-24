@@ -1,0 +1,2 @@
+module CogsHelper
+end

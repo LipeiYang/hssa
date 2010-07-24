@@ -1,0 +1,23 @@
+<p>
+  <b>Date:</b>
+  <%=h @payable.date %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%=h @payable.item %>
+</p>
+
+<p>
+  <b>Dr:</b>
+  <%=h @payable.dr %>
+</p>
+
+<p>
+  <b>Cr:</b>
+  <%=h @payable.cr %>
+</p>
+
+
+<%= link_to 'Edit', edit_payable_path(@payable) %> |
+<%= link_to 'Back', payables_path %>

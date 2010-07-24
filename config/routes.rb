@@ -1,4 +1,22 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :cogs
+
+  map.resources :sales
+
+  map.resources :paid_in_capitals
+
+  map.resources :short_term_debts
+
+  map.resources :payables
+
+  map.resources :inventories
+
+  map.resources :receivables
+
+  map.resources :materails
+
+  map.resources :companies
+
   map.resources :banks
 
   map.resources :deposits

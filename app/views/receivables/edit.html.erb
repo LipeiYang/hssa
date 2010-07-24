@@ -1,0 +1,28 @@
+<h1>Editing receivable</h1>
+
+<% form_for(@receivable) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :company_id %><br />
+    <%= f.text_field :company_id %>
+  </p>
+  <p>
+    <%= f.label :dr %><br />
+    <%= f.text_field :dr %>
+  </p>
+  <p>
+    <%= f.label :cr %><br />
+    <%= f.text_field :cr %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @receivable %> |
+<%= link_to 'Back', receivables_path %>

@@ -1,0 +1,24 @@
+<h1>Editing cog</h1>
+
+<% form_for(@cog) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :dr %><br />
+    <%= f.text_field :dr %>
+  </p>
+  <p>
+    <%= f.label :cr %><br />
+    <%= f.text_field :cr %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @cog %> |
+<%= link_to 'Back', cogs_path %>

@@ -1,0 +1,23 @@
+<p>
+  <b>Date:</b>
+  <%=h @receivable.date %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%=h @receivable.company_id %>
+</p>
+
+<p>
+  <b>Dr:</b>
+  <%=h @receivable.dr %>
+</p>
+
+<p>
+  <b>Cr:</b>
+  <%=h @receivable.cr %>
+</p>
+
+
+<%= link_to 'Edit', edit_receivable_path(@receivable) %> |
+<%= link_to 'Back', receivables_path %>

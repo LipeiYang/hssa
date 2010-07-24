@@ -1,0 +1,24 @@
+<h1>Listing short_term_debts</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Dr</th>
+    <th>Cr</th>
+  </tr>
+
+<% @short_term_debts.each do |short_term_debt| %>
+  <tr>
+    <td><%=h short_term_debt.date %></td>
+    <td><%=h short_term_debt.dr %></td>
+    <td><%=h short_term_debt.cr %></td>
+    <td><%= link_to 'Show', short_term_debt %></td>
+    <td><%= link_to 'Edit', edit_short_term_debt_path(short_term_debt) %></td>
+    <td><%= link_to 'Destroy', short_term_debt, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New short_term_debt', new_short_term_debt_path %>

@@ -1,0 +1,23 @@
+<h1>New materail</h1>
+
+<% form_for(@materail) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :seq %><br />
+    <%= f.text_field :seq %>
+  </p>
+  <p>
+    <%= f.label :visible %><br />
+    <%= f.check_box :visible %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', materails_path %>

@@ -1,0 +1,2 @@
+module PaidInCapitalsHelper
+end

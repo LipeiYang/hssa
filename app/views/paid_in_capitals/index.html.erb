@@ -1,0 +1,24 @@
+<h1>Listing paid_in_capitals</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Dr</th>
+    <th>Cr</th>
+  </tr>
+
+<% @paid_in_capitals.each do |paid_in_capital| %>
+  <tr>
+    <td><%=h paid_in_capital.date %></td>
+    <td><%=h paid_in_capital.dr %></td>
+    <td><%=h paid_in_capital.cr %></td>
+    <td><%= link_to 'Show', paid_in_capital %></td>
+    <td><%= link_to 'Edit', edit_paid_in_capital_path(paid_in_capital) %></td>
+    <td><%= link_to 'Destroy', paid_in_capital, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New paid_in_capital', new_paid_in_capital_path %>

@@ -1,0 +1,23 @@
+<p>
+  <b>Date:</b>
+  <%=h @inventory.date %>
+</p>
+
+<p>
+  <b>Materail:</b>
+  <%=h @inventory.materail_id %>
+</p>
+
+<p>
+  <b>Dr:</b>
+  <%=h @inventory.dr %>
+</p>
+
+<p>
+  <b>Cr:</b>
+  <%=h @inventory.cr %>
+</p>
+
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

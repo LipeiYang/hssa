@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2010-07-24
+  item: MyString
+  dr: 9.99
+  cr: 9.99
+
+two:
+  date: 2010-07-24
+  item: MyString
+  dr: 9.99
+  cr: 9.99

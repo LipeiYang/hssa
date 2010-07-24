@@ -1,0 +1,26 @@
+<h1>Listing receivables</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Company</th>
+    <th>Dr</th>
+    <th>Cr</th>
+  </tr>
+
+<% @receivables.each do |receivable| %>
+  <tr>
+    <td><%=h receivable.date %></td>
+    <td><%=h receivable.company_id %></td>
+    <td><%=h receivable.dr %></td>
+    <td><%=h receivable.cr %></td>
+    <td><%= link_to 'Show', receivable %></td>
+    <td><%= link_to 'Edit', edit_receivable_path(receivable) %></td>
+    <td><%= link_to 'Destroy', receivable, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New receivable', new_receivable_path %>

@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @company.name %>
+</p>
+
+<p>
+  <b>Seq:</b>
+  <%=h @company.seq %>
+</p>
+
+<p>
+  <b>Visible:</b>
+  <%=h @company.visible %>
+</p>
+
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

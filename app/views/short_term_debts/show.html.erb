@@ -1,0 +1,18 @@
+<p>
+  <b>Date:</b>
+  <%=h @short_term_debt.date %>
+</p>
+
+<p>
+  <b>Dr:</b>
+  <%=h @short_term_debt.dr %>
+</p>
+
+<p>
+  <b>Cr:</b>
+  <%=h @short_term_debt.cr %>
+</p>
+
+
+<%= link_to 'Edit', edit_short_term_debt_path(@short_term_debt) %> |
+<%= link_to 'Back', short_term_debts_path %>

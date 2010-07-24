@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  seq: 1
+  visible: false
+
+two:
+  name: MyString
+  seq: 1
+  visible: false

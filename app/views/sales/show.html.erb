@@ -1,0 +1,18 @@
+<p>
+  <b>Date:</b>
+  <%=h @sale.date %>
+</p>
+
+<p>
+  <b>Dr:</b>
+  <%=h @sale.dr %>
+</p>
+
+<p>
+  <b>Cr:</b>
+  <%=h @sale.cr %>
+</p>
+
+
+<%= link_to 'Edit', edit_sale_path(@sale) %> |
+<%= link_to 'Back', sales_path %>

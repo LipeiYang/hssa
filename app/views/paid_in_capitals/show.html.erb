@@ -1,0 +1,18 @@
+<p>
+  <b>Date:</b>
+  <%=h @paid_in_capital.date %>
+</p>
+
+<p>
+  <b>Dr:</b>
+  <%=h @paid_in_capital.dr %>
+</p>
+
+<p>
+  <b>Cr:</b>
+  <%=h @paid_in_capital.cr %>
+</p>
+
+
+<%= link_to 'Edit', edit_paid_in_capital_path(@paid_in_capital) %> |
+<%= link_to 'Back', paid_in_capitals_path %>
