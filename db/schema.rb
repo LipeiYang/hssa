@@ -96,9 +96,9 @@ ActiveRecord::Schema.define(:version => 20100724050423) do
   end
 
   create_table "sales", :force => true do |t|
-    t.date     "date"
-    t.decimal  "dr"
-    t.decimal  "cr"
+    t.date     "date",                        :null => false
+    t.decimal  "dr",         :default => 0.0, :null => false
+    t.decimal  "cr",         :default => 0.0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -885,3 +885,233 @@ Processing SalesController#index (for 127.0.0.1 at 2010-07-24 13:52:28) [GET]
 Rendering template within layouts/sales
 Rendering sales/index
 Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/sales]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGoodsCosts (20100724050423)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "goods_costs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100724050423'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("companies")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("deposits")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("inventories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("materials")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("paid_in_capitals")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("payables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("receivables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sales")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("short_term_debts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+Migrating to CreateDeposits (20100723152829)
+Migrating to CreateBanks (20100723172034)
+Migrating to AddBankIdRemoveBankToDeposit (20100723173004)
+Migrating to CreateCompanies (20100724041733)
+Migrating to CreateReceivables (20100724041812)
+Migrating to CreatePayables (20100724041836)
+Migrating to CreateShortTermDebts (20100724041848)
+Migrating to CreatePaidInCapitals (20100724041900)
+Migrating to CreateSales (20100724041912)
+Migrating to CreateMaterials (20100724044825)
+Migrating to CreateInventories (20100724044836)
+Migrating to CreateGoodsCosts (20100724050423)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "goods_costs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date NOT NULL, "dr" decimal DEFAULT 0 NOT NULL, "cr" decimal DEFAULT 0 NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724050423')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (15.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("companies")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("deposits")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("goods_costs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("inventories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("materials")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("paid_in_capitals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("payables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("receivables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sales")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("short_term_debts")[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mDROP TABLE "sales"[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100724041912'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("companies")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("deposits")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("goods_costs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("inventories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("materials")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("paid_in_capitals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("payables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("receivables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("short_term_debts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (79.0ms)[0m   [0mCREATE TABLE "sales" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date NOT NULL, "dr" decimal DEFAULT 0 NOT NULL, "cr" decimal DEFAULT 0 NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724041912')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("companies")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("deposits")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("goods_costs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("inventories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("materials")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("paid_in_capitals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("payables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("receivables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sales")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("short_term_debts")[0m
+
+
+Processing SalesController#index (for 127.0.0.1 at 2010-07-24 14:04:08) [GET]
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" [0m
+Rendering template within layouts/sales
+Rendering sales/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/sales]
+
+
+Processing SalesController#new (for 127.0.0.1 at 2010-07-24 14:04:13) [GET]
+Rendering template within layouts/sales
+Rendering sales/new
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/sales/new]
+
+
+Processing SalesController#index (for 127.0.0.1 at 2010-07-24 14:04:14) [GET]
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" [0m
+Rendering template within layouts/sales
+Rendering sales/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/sales]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGoodsCosts (20100724050423)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "goods_costs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100724050423'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("companies")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("deposits")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("inventories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("materials")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("paid_in_capitals")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("payables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("receivables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sales")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("short_term_debts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCashes (20100722175010)
+Migrating to CreateDeposits (20100723152829)
+Migrating to CreateBanks (20100723172034)
+Migrating to AddBankIdRemoveBankToDeposit (20100723173004)
+Migrating to CreateCompanies (20100724041733)
+Migrating to CreateReceivables (20100724041812)
+Migrating to CreatePayables (20100724041836)
+Migrating to CreateShortTermDebts (20100724041848)
+Migrating to CreatePaidInCapitals (20100724041900)
+Migrating to CreateSales (20100724041912)
+Migrating to CreateMaterials (20100724044825)
+Migrating to CreateInventories (20100724044836)
+Migrating to CreateGoodsCosts (20100724050423)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "goods_costs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date NOT NULL, "dr" decimal DEFAULT 0 NOT NULL, "cr" decimal DEFAULT 0 NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100724050423')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("banks")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cashes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("companies")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("deposits")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("goods_costs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("inventories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("materials")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("paid_in_capitals")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("payables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("receivables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sales")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("short_term_debts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
