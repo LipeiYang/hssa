@@ -1,16 +1,19 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  id: 1
   name: Company A
   seq: 1
   visible: true
 
 two:
+  id: 2
   name: Company B
   seq: 2
   visible: true
 
 three:
+  id: 3
   name: Company C
   seq: 3
   visible: true

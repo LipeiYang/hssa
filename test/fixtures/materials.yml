@@ -1,11 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  id: 1
   name: Raw Materials A
   seq: 1
   visible: true
 
 two:
+  id: 2
   name: Raw Materials B
   seq: 2
   visible: true
