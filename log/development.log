@@ -2059,3 +2059,366 @@ Processing SalesController#index (for 127.0.0.1 at 2010-07-24 18:44:17) [GET]
 Rendering template within layouts/sales
 Rendering sales/index
 Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/sales]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 18:50:51) [GET]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing DepositsController#new (for 127.0.0.1 at 2010-07-24 18:50:56) [GET]
+Rendering template within layouts/deposits
+Rendering deposits/new
+  [4;35;1mBank Load (16.0ms)[0m   [0mSELECT * FROM "banks" ORDER BY seq[0m
+Rendered deposits/_deposit_sub_form_item (63.0ms)
+Rendered templates/entity/_create_edit_base_form (109.0ms)
+Rendered templates/entity/_create_form (109.0ms)
+Completed in 125ms (View: 93, DB: 16) | 200 OK [http://localhost/deposits/new]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 18:50:59) [GET]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing DepositsController#edit (for 127.0.0.1 at 2010-07-24 18:51:00) [GET]
+  Parameters: {"id"=>"298486374"}
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."id" = 298486374) [0m
+Rendering template within layouts/deposits
+Rendering deposits/edit
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" ORDER BY seq[0m
+Rendered deposits/_deposit_sub_form_item (16.0ms)
+Rendered templates/entity/_create_edit_base_form (31.0ms)
+Rendered templates/entity/_edit_form (31.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/deposits/298486374/edit]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 18:51:02) [GET]
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing InventoriesController#index (for 127.0.0.1 at 2010-07-24 18:54:54) [GET]
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" [0m
+Rendering template within layouts/inventories
+Rendering inventories/index
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/inventories]
+
+
+Processing InventoriesController#index (for 127.0.0.1 at 2010-07-24 18:55:25) [GET]
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" [0m
+Rendering template within layouts/inventories
+Rendering inventories/index
+
+ActionView::TemplateError (undefined method `material' for #<Inventory:0x4640e98>) on line #14 of app/views/inventories/index.html.erb:
+11: <% @inventories.each do |inventory| %>
+12:   <tr>
+13:     <td><%=h inventory.date %></td>
+14:     <td><%=h inventory.material.name %></td>
+15:     <td><%=h inventory.dr %></td>
+16:     <td><%=h inventory.cr %></td>
+17:     <td><%= link_to 'Show', inventory %></td>
+
+    app/views/inventories/index.html.erb:14
+    app/views/inventories/index.html.erb:11:in `each'
+    app/views/inventories/index.html.erb:11
+    app/controllers/inventories_controller.rb:7:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InventoriesController#index (for 127.0.0.1 at 2010-07-24 18:57:16) [GET]
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" [0m
+Rendering template within layouts/inventories
+Rendering inventories/index
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/inventories]
+
+
+Processing InventoriesController#new (for 127.0.0.1 at 2010-07-24 18:57:19) [GET]
+Rendering template within layouts/inventories
+Rendering inventories/new
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" ORDER BY seq[0m
+Rendered inventories/_inventory_sub_form_item (46.0ms)
+Rendered templates/entity/_create_edit_base_form (140.0ms)
+Rendered templates/entity/_create_form (140.0ms)
+Completed in 203ms (View: 187, DB: 0) | 200 OK [http://localhost/inventories/new]
+
+
+Processing InventoriesController#index (for 127.0.0.1 at 2010-07-24 18:57:21) [GET]
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" [0m
+Rendering template within layouts/inventories
+Rendering inventories/index
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/inventories]
+
+
+Processing InventoriesController#edit (for 127.0.0.1 at 2010-07-24 18:57:23) [GET]
+  Parameters: {"id"=>"298486374"}
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."id" = 298486374) [0m
+Rendering template within layouts/inventories
+Rendering inventories/edit
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" ORDER BY seq[0m
+Rendered inventories/_inventory_sub_form_item (16.0ms)
+Rendered templates/entity/_create_edit_base_form (31.0ms)
+Rendered templates/entity/_edit_form (31.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/inventories/298486374/edit]
+
+
+Processing InventoriesController#index (for 127.0.0.1 at 2010-07-24 18:57:26) [GET]
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" [0m
+Rendering template within layouts/inventories
+Rendering inventories/index
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/inventories]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 18:58:28) [GET]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing DepositsController#new (for 127.0.0.1 at 2010-07-24 18:58:29) [GET]
+Rendering template within layouts/deposits
+Rendering deposits/new
+  [4;35;1mBank Load (0.0ms)[0m   [0mSQLite3::SQLException: near "dsc": syntax error: SELECT * FROM "banks" ORDER BY seq dsc[0m
+
+ActionView::TemplateError (SQLite3::SQLException: near "dsc": syntax error: SELECT * FROM "banks"  ORDER BY seq dsc) on line #3 of app/views/deposits/_deposit_sub_form_item.erb:
+1:  <p>
+2:     <%= f.label :bank %><br />
+3:     <%= f.collection_select :bank_id, Bank.all(:order=>"seq dsc"), :id, :name%>
+4:  </p>
+
+    app/views/deposits/_deposit_sub_form_item.erb:3
+    app/views/templates/entity/_create_edit_base_form.erb:8
+    app/views/templates/entity/_create_edit_base_form.erb:1
+    app/views/templates/entity/_create_form.erb:2
+    app/views/deposits/new.html.erb:3
+    app/controllers/deposits_controller.rb:29:in `new'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DepositsController#new (for 127.0.0.1 at 2010-07-24 18:58:41) [GET]
+Rendering template within layouts/deposits
+Rendering deposits/new
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" ORDER BY seq desc[0m
+Rendered deposits/_deposit_sub_form_item (94.0ms)
+Rendered templates/entity/_create_edit_base_form (219.0ms)
+Rendered templates/entity/_create_form (234.0ms)
+Completed in 250ms (View: 234, DB: 0) | 200 OK [http://localhost/deposits/new]
+
+
+Processing DepositsController#new (for 127.0.0.1 at 2010-07-24 18:58:53) [GET]
+Rendering template within layouts/deposits
+Rendering deposits/new
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" ORDER BY seq [0m
+Rendered deposits/_deposit_sub_form_item (15.0ms)
+Rendered templates/entity/_create_edit_base_form (31.0ms)
+Rendered templates/entity/_create_form (31.0ms)
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/deposits/new]
+
+
+Processing DepositsController#index (for 127.0.0.1 at 2010-07-24 18:59:05) [GET]
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" [0m
+Rendering template within layouts/deposits
+Rendering deposits/index
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/deposits]
+
+
+Processing InventoriesController#new (for 127.0.0.1 at 2010-07-24 18:59:08) [GET]
+Rendering template within layouts/inventories
+Rendering inventories/new
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" ORDER BY seq[0m
+Rendered inventories/_inventory_sub_form_item (15.0ms)
+Rendered templates/entity/_create_edit_base_form (31.0ms)
+Rendered templates/entity/_create_form (31.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/inventories/new]
+
+
+Processing InventoriesController#index (for 127.0.0.1 at 2010-07-24 18:59:11) [GET]
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" [0m
+Rendering template within layouts/inventories
+Rendering inventories/index
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/inventories]
+
+
+Processing PayablesController#index (for 127.0.0.1 at 2010-07-24 19:02:36) [GET]
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" [0m
+Rendering template within layouts/payables
+Rendering payables/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/payables]
+
+
+Processing PayablesController#new (for 127.0.0.1 at 2010-07-24 19:02:40) [GET]
+Rendering template within layouts/payables
+Rendering payables/new
+Rendered payables/_payable_sub_form_item (0.0ms)
+Rendered templates/entity/_create_edit_base_form (15.0ms)
+Rendered templates/entity/_create_form (15.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/payables/new]
+
+
+Processing PayablesController#index (for 127.0.0.1 at 2010-07-24 19:02:42) [GET]
+  [4;36;1mPayable Load (15.0ms)[0m   [0;1mSELECT * FROM "payables" [0m
+Rendering template within layouts/payables
+Rendering payables/index
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://localhost/payables]
+
+
+Processing PayablesController#edit (for 127.0.0.1 at 2010-07-24 19:02:43) [GET]
+  Parameters: {"id"=>"113629430"}
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."id" = 113629430) [0m
+Rendering template within layouts/payables
+Rendering payables/edit
+Rendered payables/_payable_sub_form_item (0.0ms)
+Rendered templates/entity/_create_edit_base_form (16.0ms)
+Rendered templates/entity/_edit_form (16.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/payables/113629430/edit]
+
+
+Processing PayablesController#index (for 127.0.0.1 at 2010-07-24 19:02:45) [GET]
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" [0m
+Rendering template within layouts/payables
+Rendering payables/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/payables]
+
+
+Processing ReceivablesController#index (for 127.0.0.1 at 2010-07-24 19:07:42) [GET]
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" [0m
+Rendering template within layouts/receivables
+Rendering receivables/index
+
+ActionView::TemplateError (undefined method `company' for #<Receivable:0x4ab71fc>) on line #14 of app/views/receivables/index.html.erb:
+11: <% @receivables.each do |receivable| %>
+12:   <tr>
+13:     <td><%=h receivable.date %></td>
+14:     <td><%=h receivable.company.name %></td>
+15:     <td><%=h receivable.dr %></td>
+16:     <td><%=h receivable.cr %></td>
+17:     <td><%= link_to 'Show', receivable %></td>
+
+    app/views/receivables/index.html.erb:14
+    app/views/receivables/index.html.erb:11:in `each'
+    app/views/receivables/index.html.erb:11
+    app/controllers/receivables_controller.rb:7:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReceivablesController#index (for 127.0.0.1 at 2010-07-24 19:08:31) [GET]
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" [0m
+Rendering template within layouts/receivables
+Rendering receivables/index
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/receivables]
+
+
+Processing ReceivablesController#edit (for 127.0.0.1 at 2010-07-24 19:08:34) [GET]
+  Parameters: {"id"=>"113629430"}
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."id" = 113629430) [0m
+Rendering template within layouts/receivables
+Rendering receivables/edit
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" ORDER BY seq[0m
+Rendered receivables/_receivable_sub_form_item (94.0ms)
+Rendered templates/entity/_create_edit_base_form (250.0ms)
+Rendered templates/entity/_edit_form (250.0ms)
+Completed in 328ms (View: 312, DB: 0) | 200 OK [http://localhost/receivables/113629430/edit]
+
+
+Processing ReceivablesController#index (for 127.0.0.1 at 2010-07-24 19:08:37) [GET]
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" [0m
+Rendering template within layouts/receivables
+Rendering receivables/index
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/receivables]
+
+
+Processing ReceivablesController#new (for 127.0.0.1 at 2010-07-24 19:08:38) [GET]
+Rendering template within layouts/receivables
+Rendering receivables/new
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" ORDER BY seq[0m
+Rendered receivables/_receivable_sub_form_item (16.0ms)
+Rendered templates/entity/_create_edit_base_form (16.0ms)
+Rendered templates/entity/_create_form (16.0ms)
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/receivables/new]
+
+
+Processing ReceivablesController#index (for 127.0.0.1 at 2010-07-24 19:08:41) [GET]
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" [0m
+Rendering template within layouts/receivables
+Rendering receivables/index
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/receivables]
+
+
+Processing ShortTermDebtsController#index (for 127.0.0.1 at 2010-07-24 19:12:06) [GET]
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" [0m
+Rendering template within layouts/short_term_debts
+Rendering short_term_debts/index
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/short_term_debts]

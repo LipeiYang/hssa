@@ -1,28 +1,6 @@
 <h1>Editing payable</h1>
 
-<% form_for(@payable) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </p>
-  <p>
-    <%= f.label :item %><br />
-    <%= f.text_field :item %>
-  </p>
-  <p>
-    <%= f.label :dr %><br />
-    <%= f.text_field :dr %>
-  </p>
-  <p>
-    <%= f.label :cr %><br />
-    <%= f.text_field :cr %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render :partial => "templates/entity/edit_form", :locals =>{ :data_src=>@payable, :form_sub_item=> "payable_sub_form_item"} %>
 
 <%= link_to 'Show', @payable %> |
 <%= link_to 'Back', payables_path %>

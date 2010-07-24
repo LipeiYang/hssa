@@ -1,24 +1,6 @@
 <h1>Editing paid_in_capital</h1>
 
-<% form_for(@paid_in_capital) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </p>
-  <p>
-    <%= f.label :dr %><br />
-    <%= f.text_field :dr %>
-  </p>
-  <p>
-    <%= f.label :cr %><br />
-    <%= f.text_field :cr %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render :partial => "templates/entity/edit_form", :locals =>{ :data_src=>@paid_in_capital, :form_sub_item=>nil } %>
 
 <%= link_to 'Show', @paid_in_capital %> |
 <%= link_to 'Back', paid_in_capitals_path %>

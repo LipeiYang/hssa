@@ -1,24 +1,6 @@
 <h1>Editing short_term_debt</h1>
 
-<% form_for(@short_term_debt) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </p>
-  <p>
-    <%= f.label :dr %><br />
-    <%= f.text_field :dr %>
-  </p>
-  <p>
-    <%= f.label :cr %><br />
-    <%= f.text_field :cr %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render :partial => "templates/entity/edit_form", :locals =>{ :data_src=>@short_term_debt, :form_sub_item=>nil } %>
 
 <%= link_to 'Show', @short_term_debt %> |
 <%= link_to 'Back', short_term_debts_path %>

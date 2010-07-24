@@ -11,7 +11,7 @@
 <% @inventories.each do |inventory| %>
   <tr>
     <td><%=h inventory.date %></td>
-    <td><%=h inventory.material_id %></td>
+    <td><%=h inventory.material.name %></td>
     <td><%=h inventory.dr %></td>
     <td><%=h inventory.cr %></td>
     <td><%= link_to 'Show', inventory %></td>

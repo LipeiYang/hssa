@@ -1,27 +1,5 @@
 <h1>New inventory</h1>
 
-<% form_for(@inventory) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </p>
-  <p>
-    <%= f.label :material_id %><br />
-    <%= f.text_field :material_id %>
-  </p>
-  <p>
-    <%= f.label :dr %><br />
-    <%= f.text_field :dr %>
-  </p>
-  <p>
-    <%= f.label :cr %><br />
-    <%= f.text_field :cr %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+<%= render :partial => "templates/entity/create_form", :locals =>{ :data_src=>@inventory, :form_sub_item=> "inventory_sub_form_item"} %>
 
 <%= link_to 'Back', inventories_path %>

@@ -1,24 +1,6 @@
 <h1>Editing sale</h1>
 
-<% form_for(@sale) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </p>
-  <p>
-    <%= f.label :dr %><br />
-    <%= f.text_field :dr %>
-  </p>
-  <p>
-    <%= f.label :cr %><br />
-    <%= f.text_field :cr %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render :partial => "templates/entity/edit_form", :locals =>{ :data_src=>@sale, :form_sub_item=>nil } %>
 
 <%= link_to 'Show', @sale %> |
 <%= link_to 'Back', sales_path %>

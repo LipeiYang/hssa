@@ -11,7 +11,7 @@
 <% @receivables.each do |receivable| %>
   <tr>
     <td><%=h receivable.date %></td>
-    <td><%=h receivable.company_id %></td>
+    <td><%=h receivable.company.name %></td>
     <td><%=h receivable.dr %></td>
     <td><%=h receivable.cr %></td>
     <td><%= link_to 'Show', receivable %></td>

@@ -1,0 +1,5 @@
+<p>
+  <%= f.label :material %><br />
+  <%= f.collection_select :material_id, Material.all(:order=>"seq"), :id, :name%>
+</p>
+ 
