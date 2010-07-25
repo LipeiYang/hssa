@@ -1,13 +1,29 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+1:
+  id: 1
   date: 2010-01-01
   material_id: 1
   dr: 12000
   cr: 0
 
-two:
+2:
+  id: 2
   date: 2010-01-01
   material_id: 2
   dr: 18000
+  cr: 0
+
+3:
+  id: 3
+  date: 2010-02-01
+  material_id: 1
+  dr: 48000
+  cr: 0
+
+4:
+  id: 4
+  date: 2010-02-01
+  material_id: 2
+  dr: 42000
   cr: 0

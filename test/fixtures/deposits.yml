@@ -1,13 +1,29 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+1:
+  id: 1
   date: 2010-01-01
   bank_id: 1
   dr: 100000
   cr: 0
 
-two:
+2:
+  id: 2
   date: 2010-01-01
   bank_id: 2
   dr: 150000
   cr: 0
+
+3:
+  id: 3
+  date: 2010-02-01
+  bank_id: 1
+  dr: 200000
+  cr: 75000
+
+4:
+  id: 4
+  date: 2010-02-01
+  bank_id: 2
+  dr: 100000
+  cr: 60000
