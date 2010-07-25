@@ -3,21 +3,57 @@
 <table>
   
   <tr>
-    <td>ASSETS</td>
+    <td class="bal_sht">ASSETS</td>
     <td></td>
   </tr>
 
   <tr>
-    <td>CURRENT ASSETS</td>
+    <td class="sht_left">CURRENT ASSETS</td>
     <td></td>
   </tr>
 
   <tr>
-    <td>Cash and cash equivalents</td>
+    <td class="sht_left">Cash and cash equivalents</td>
     <td><%=f @bal_sht.cash_equivalents %></td>
   </tr>
 
+  <tr>
+    <td class="sht_left">Accounts receivables</td>
+    <td><%=f @bal_sht.accounts_receivables %></td>
+  </tr>
   
+  <tr>
+    <td class="sht_left">Inventory</td>
+    <td><%=f @bal_sht.inventory %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Total current assets</td>
+    <td><%=f @bal_sht.total_current_assets %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Gross property, plant and equipment - net</td>
+    <td><%=f @bal_sht.gross_property_plant_equipment_net %></td>
+  </tr>
+
+  <tr class="alt">
+    <td class="sht_left">TOTAL ASSETS</td>
+    <td><%=f @bal_sht.total_assets %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">LIABILITIES AND STOCKHOLDERS' EQUITY</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">CURRENT LIABILITIES:</td>
+    <td></td>
+  </tr>
+
 </table>
 
 <br />
+
+<%= render :partial => "templates/entity/back_to_tri_bal" %>

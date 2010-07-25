@@ -5,7 +5,7 @@ class BalanceSheetController < ApplicationController
   def show
     @audit_month = session[:audit_month]
     
-    @bal_sht = BalanceSheet.new(Date.new(2010,3,1))
+    @bal_sht = BalanceSheet.new(@audit_month)
 
     respond_to do |format|
       format.html # show.html.erb

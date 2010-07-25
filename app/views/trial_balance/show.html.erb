@@ -14,89 +14,89 @@
   </tr>
 
   <tr>
-    <td><%= link_to 'Cash', cashes_path %></td>
+    <td class="sht_left"><%= link_to 'Cash', cashes_path %></td>
     <td><%=f @trial_balance.cash.dr %></td>
     <td><%=f @trial_balance.cash.cr %></td>
   </tr>
 
   <tr>
-    <td><%= link_to 'Bank Deposits', deposits_path %></td>
+    <td class="sht_left"><%= link_to 'Bank Deposits', deposits_path %></td>
     <td><%=f @trial_balance.bank_deposit.dr %></td>
     <td><%=f @trial_balance.bank_deposit.cr %></td>
   </tr>
   <% @trial_balance.deposits.to_a.each do |deposit| %>
   <tr>
-    <td><%=h deposit.bank.name %></td>
+    <td class="sht_left"><%=h deposit.bank.name %></td>
     <td><%=f deposit.dr %></td>
     <td><%=f deposit.cr %></td>
   </tr>
   <% end %>
   
   <tr>
-    <td><%= link_to 'Account Receivables', receivables_path %></td>
+    <td class="sht_left"><%= link_to 'Account Receivables', receivables_path %></td>
     <td><%=f @trial_balance.acct_rec.dr %></td>
     <td><%=f @trial_balance.acct_rec.cr %></td>
   </tr>
   <% @trial_balance.receivables.to_a.each do |receivable| %>
   <tr>
-    <td><%=h receivable.company.name %></td>
+    <td class="sht_left"><%=h receivable.company.name %></td>
     <td><%=f receivable.dr %></td>
     <td><%=f receivable.cr %></td>
   </tr>
   <% end %>
 
   <tr>
-    <td><%= link_to 'Inventory', inventories_path %></td>
+    <td class="sht_left"><%= link_to 'Inventory', inventories_path %></td>
     <td><%=f @trial_balance.raw_inventorie.dr %></td>
     <td><%=f @trial_balance.raw_inventorie.cr %></td>
   </tr>
   <% @trial_balance.inventories.to_a.each do |inventory| %>
   <tr>
-    <td><%=h inventory.material.name %></td>
+    <td class="sht_left"><%=h inventory.material.name %></td>
     <td><%=f inventory.dr %></td>
     <td><%=f inventory.cr %></td>
   </tr>
   <% end %>
 
   <tr>
-    <td><%= link_to 'Account Payables', payables_path %></td>
+    <td class="sht_left"><%= link_to 'Account Payables', payables_path %></td>
     <td><%=f @trial_balance.acct_payable.dr %></td>
     <td><%=f @trial_balance.acct_payable.cr %></td>
   </tr>
   <% @trial_balance.payables.to_a.each do |payable| %>
   <tr>
-    <td><%=h payable.item %></td>
+    <td class="sht_left"><%=h payable.item %></td>
     <td><%=f payable.dr %></td>
     <td><%=f payable.cr %></td>
   </tr>
   <% end %>
   
   <tr>
-    <td><%= link_to 'Short-Term Debt', short_term_debts_path %></td>
+    <td class="sht_left"><%= link_to 'Short-Term Debt', short_term_debts_path %></td>
     <td><%=f @trial_balance.short_term_debt.dr %></td>
     <td><%=f @trial_balance.short_term_debt.cr %></td>
   </tr>
 
   <tr>
-    <td><%= link_to 'Paid-in Capital', paid_in_capitals_path %></td>
+    <td class="sht_left"><%= link_to 'Paid-in Capital', paid_in_capitals_path %></td>
     <td><%=f @trial_balance.paid_in_capital.dr %></td>
     <td><%=f @trial_balance.paid_in_capital.cr %></td>
   </tr>
 
   <tr>
-    <td><%= link_to 'Sales', sales_path %></td>
+    <td class="sht_left"><%= link_to 'Sales', sales_path %></td>
     <td><%=f @trial_balance.sale.dr %></td>
     <td><%=f @trial_balance.sale.cr %></td>
   </tr>
 
   <tr>
-    <td><%= link_to 'COGS', goods_costs_path %></td>
+    <td class="sht_left"><%= link_to 'COGS', goods_costs_path %></td>
     <td><%=f @trial_balance.goods_cost.dr %></td>
     <td><%=f @trial_balance.goods_cost.cr %></td>
   </tr>
 
   <tr>
-    <td>Total</td>
+    <td class="sht_left">Total</td>
     <td><%=f @trial_balance.total_dr %></td>
     <td><%=f @trial_balance.total_cr %></td>
   </tr>
@@ -104,3 +104,5 @@
 </table>
 
 <br />
+
+<%= link_to 'Balance Sheet', url_for(:controller=>'balance_sheet', :action=>'show') %>

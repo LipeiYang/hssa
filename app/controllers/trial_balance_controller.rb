@@ -8,8 +8,6 @@ class TrialBalanceController < ApplicationController
     end
     @audit_month = session[:audit_month]
     
-    puts "@audit_month: #{@audit_month}"
-    
     @trial_balance = TrialBalance.new(@audit_month)
     
     respond_to do |format|
