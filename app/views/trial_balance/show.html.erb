@@ -1,0 +1,57 @@
+<h1>TRIAL BALANCE AS AT</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Dr</th>
+    <th>Cr</th>
+  </tr>
+
+  <tr>
+    <td><%= link_to 'Cash', cashes_path %></td>
+    <td><%=f @trial_balance.cash.dr %></td>
+    <td><%=f @trial_balance.cash.cr %></td>
+  </tr>
+
+  <tr>
+    <td><%= link_to 'Bank Deposits', deposits_path %></td>
+    <td><%=f @trial_balance.bank_deposits.dr %></td>
+    <td><%=f @trial_balance.bank_deposits.cr %></td>
+  </tr>
+  <% @trial_balance.deposits.to_a.each do |deposit| %>
+  <tr>
+    <td><%=h deposit.bank.name %></td>
+    <td><%=f deposit.dr %></td>
+    <td><%=f deposit.cr %></td>
+  </tr>
+  <% end %>
+  
+  <tr>
+    <td><%= link_to 'Account Receivables', receivables_path %></td>
+    <td><%=f @trial_balance.acct_recs.dr %></td>
+    <td><%=f @trial_balance.acct_recs.cr %></td>
+  </tr>
+  <% @trial_balance.receivables.to_a.each do |receivable| %>
+  <tr>
+    <td><%=h receivable.company.name %></td>
+    <td><%=f receivable.dr %></td>
+    <td><%=f receivable.cr %></td>
+  </tr>
+  <% end %>
+
+  <tr>
+    <td><%= link_to 'Inventory', inventories_path %></td>
+    <td><%=f @trial_balance.raw_inventories.dr %></td>
+    <td><%=f @trial_balance.raw_inventories.cr %></td>
+  </tr>
+  <% @trial_balance.inventories.to_a.each do |inventory| %>
+  <tr>
+    <td><%=h inventory.material.name %></td>
+    <td><%=f inventory.dr %></td>
+    <td><%=f inventory.cr %></td>
+  </tr>
+  <% end %>
+  
+</table>
+
+<br />
