@@ -25,7 +25,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :cashes
 
-  map.resources :trial_balance, :controller=>"trial_balance" 
+  map.resources :trial_balance, :path_names => {:index => 'show'}
   
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -59,7 +59,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "trial_balance"
+  # map.root :controller => "trial_balance", :action=>"show", :path_names => {:index => 'show'}
 
   # See how all your routes lay out with "rake routes"
 

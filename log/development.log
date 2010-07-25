@@ -3883,3 +3883,1452 @@ Rendering trial_balance/show
   [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
   [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
 Completed in 187ms (View: 62, DB: 0) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:09:11) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (16.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (15.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 297ms (View: 140, DB: 31) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 00:09:15) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:10:13) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+
+ActionView::TemplateError (trial_balance_url failed to generate from {:action=>"show", :controller=>"trial_balance"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["trial_balance", :id] - are they all satisfied?) on line #1 of app/views/trial_balance/show.html.erb:
+1: <% form_tag trial_balance_path, :method => "get" do %>
+2:   <%= label_tag 'Month' %>:
+3:   <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
+4:   <%= submit_tag "Go" %>
+
+    (eval):17:in `trial_balance_path'
+    app/views/trial_balance/show.html.erb:1
+    app/controllers/trial_balance_controller.rb:13:in `show'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:12:03) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 234ms (View: 125, DB: 0) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:12:08) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (15.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+
+ActionView::TemplateError (trial_balance_url failed to generate from {:action=>"show", :controller=>"trial_balance"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["trial_balance", :id] - are they all satisfied?) on line #1 of app/views/trial_balance/show.html.erb:
+1: <% form_tag trial_balance_path, :method => "get" do %>
+2:   <%= label_tag 'Month' %>:
+3:   <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
+4:   <%= submit_tag "Go" %>
+
+    (eval):17:in `trial_balance_path'
+    app/views/trial_balance/show.html.erb:1
+    app/controllers/trial_balance_controller.rb:13:in `show'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 00:14:44) [GET]
+
+ActionController::RoutingError (No route matches "/balance_sheet/show" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 00:14:55) [GET]
+  Parameters: {"commit"=>"Go", "audit_month"=>{"month"=>"2", "day"=>"1", "year"=>"2010"}}
+
+ActionController::RoutingError (No route matches "/trial_balance/show" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:15:34) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 234ms (View: 63, DB: 0) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing BalanceSheetController#show (for 127.0.0.1 at 2010-07-26 00:15:36) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/balance_sheet
+Rendering balance_sheet/show
+Rendered templates/entity/_back_to_tri_bal (0.0ms)
+Completed in 265ms (View: 78, DB: 0) | 200 OK [http://localhost/balance_sheet/show]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:15:38) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 297ms (View: 62, DB: 0) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing BalanceSheetController#show (for 127.0.0.1 at 2010-07-26 00:16:04) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/balance_sheet
+Rendering balance_sheet/show
+Rendered templates/entity/_back_to_tri_bal (0.0ms)
+Completed in 203ms (View: 0, DB: 0) | 200 OK [http://localhost/balance_sheet/show]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:16:05) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (15.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mMaterial Load (16.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 172ms (View: 47, DB: 31) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-07-26 00:16:07) [GET]
+  Parameters: {"commit"=>"Go", "audit_month"=>{"month"=>"1", "day"=>"1", "year"=>"2010"}}
+
+NameError (uninitialized constant TrialBalancesController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#index (for 127.0.0.1 at 2010-07-26 00:16:59) [GET]
+  Parameters: {"commit"=>"Go", "audit_month"=>{"month"=>"1", "day"=>"1", "year"=>"2010"}}
+
+ActionController::UnknownAction (No action responded to index. Actions: show):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrialBalanceController#index (for 127.0.0.1 at 2010-07-26 00:17:03) [GET]
+  Parameters: {"commit"=>"Go", "audit_month"=>{"month"=>"1", "day"=>"1", "year"=>"2010"}}
+
+ActionController::UnknownAction (No action responded to index. Actions: show):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 00:17:15) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 00:17:26) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:17:33) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 187ms (View: 62, DB: 0) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-07-26 00:17:36) [GET]
+  Parameters: {"commit"=>"Go", "audit_month"=>{"month"=>"2", "day"=>"1", "year"=>"2010"}}
+
+NameError (uninitialized constant TrialBalancesController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-07-26 00:20:40) [GET]
+  Parameters: {"commit"=>"Go", "audit_month"=>{"month"=>"2", "day"=>"1", "year"=>"2010"}}
+
+NameError (uninitialized constant TrialBalancesController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#index (for 127.0.0.1 at 2010-07-26 00:22:41) [GET]
+  Parameters: {"commit"=>"Go", "audit_month"=>{"month"=>"2", "day"=>"1", "year"=>"2010"}}
+
+ActionController::UnknownAction (No action responded to index. Actions: show):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrialBalanceController#index (for 127.0.0.1 at 2010-07-26 00:24:09) [GET]
+  Parameters: {"commit"=>"Go", "audit_month"=>{"month"=>"2", "day"=>"1", "year"=>"2010"}}
+
+ActionController::UnknownAction (No action responded to index. Actions: show):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:25:54) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 250ms (View: 78, DB: 0) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:25:57) [GET]
+  Parameters: {"commit"=>"Go", "id"=>"show", "audit_month"=>{"month"=>"2", "day"=>"1", "year"=>"2010"}}
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 188ms (View: 63, DB: 0) | 200 OK [http://localhost/trial_balance/show?audit_month%5Byear%5D=2010&audit_month%5Bmonth%5D=2&audit_month%5Bday%5D=1&commit=Go]
+
+
+Processing BalanceSheetController#show (for 127.0.0.1 at 2010-07-26 00:26:05) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (16.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/balance_sheet
+Rendering balance_sheet/show
+Rendered templates/entity/_back_to_tri_bal (0.0ms)
+Completed in 328ms (View: 16, DB: 16) | 200 OK [http://localhost/balance_sheet/show]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:26:07) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 172ms (View: 63, DB: 0) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:26:13) [GET]
+  Parameters: {"commit"=>"Go", "id"=>"show", "audit_month"=>{"month"=>"2", "day"=>"1", "year"=>"2010"}}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 266ms (View: 141, DB: 0) | 200 OK [http://localhost/trial_balance/show?audit_month%5Byear%5D=2010&audit_month%5Bmonth%5D=2&audit_month%5Bday%5D=1&commit=Go]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:26:16) [GET]
+  Parameters: {"commit"=>"Go", "id"=>"show", "audit_month"=>{"month"=>"1", "day"=>"1", "year"=>"2010"}}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 188ms (View: 63, DB: 0) | 200 OK [http://localhost/trial_balance/show?audit_month%5Byear%5D=2010&audit_month%5Bmonth%5D=1&audit_month%5Bday%5D=1&commit=Go]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:26:20) [GET]
+  Parameters: {"commit"=>"Go", "id"=>"show", "audit_month"=>{"month"=>"2", "day"=>"1", "year"=>"2010"}}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (15.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 188ms (View: 63, DB: 15) | 200 OK [http://localhost/trial_balance/show?audit_month%5Byear%5D=2010&audit_month%5Bmonth%5D=2&audit_month%5Bday%5D=1&commit=Go]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:26:24) [GET]
+  Parameters: {"commit"=>"Go", "id"=>"show", "audit_month"=>{"month"=>"3", "day"=>"1", "year"=>"2010"}}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-03-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-03-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-03-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-03-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-03-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+Completed in 219ms (View: 32, DB: 0) | 200 OK [http://localhost/trial_balance/show?audit_month%5Byear%5D=2010&audit_month%5Bmonth%5D=3&audit_month%5Bday%5D=1&commit=Go]
+
+
+Processing BalanceSheetController#show (for 127.0.0.1 at 2010-07-26 00:26:26) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-03-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-03-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-03-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-03-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-03-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-03-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-03-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-03-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-03-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-03-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-03-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-03-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-03-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-03-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-03-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-03-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-03-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-03-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-03-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-03-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-03-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-03-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-03-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-03-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-03-01') LIMIT 1[0m
+Rendering template within layouts/balance_sheet
+Rendering balance_sheet/show
+Rendered templates/entity/_back_to_tri_bal (0.0ms)
+Completed in 250ms (View: 0, DB: 0) | 200 OK [http://localhost/balance_sheet/show]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:26:29) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-03-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-03-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-03-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-03-01') [0m
+  [4;35;1mShortTermDebt Load (15.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-03-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-03-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-03-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+Completed in 203ms (View: 16, DB: 15) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:26:32) [GET]
+  Parameters: {"commit"=>"Go", "id"=>"show", "audit_month"=>{"month"=>"1", "day"=>"1", "year"=>"2010"}}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (16.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 172ms (View: 63, DB: 16) | 200 OK [http://localhost/trial_balance/show?audit_month%5Byear%5D=2010&audit_month%5Bmonth%5D=1&audit_month%5Bday%5D=1&commit=Go]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:27:57) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+
+ActionView::TemplateError (trial_balance_url failed to generate from {:action=>"show", :controller=>"trial_balance"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["trial_balance", :id] - are they all satisfied?) on line #1 of app/views/trial_balance/show.html.erb:
+1: <% form_tag trial_balance_path, :method => "get" do %>
+2:   <%= label_tag 'Month' %>:
+3:   <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
+4:   <%= submit_tag "Go" %>
+
+    (eval):17:in `trial_balance_path'
+    app/views/trial_balance/show.html.erb:1
+    app/controllers/trial_balance_controller.rb:13:in `show'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:28:18) [GET]
+  Parameters: {"path_names"=>{"index"=>"show"}}
+  [4;36;1mCash Load (16.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+
+ActionView::TemplateError (trial_balance_url failed to generate from {:action=>"show", :controller=>"trial_balance"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["trial_balance", :id] - are they all satisfied?) on line #1 of app/views/trial_balance/show.html.erb:
+1: <% form_tag trial_balance_path, :method => "get" do %>
+2:   <%= label_tag 'Month' %>:
+3:   <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
+4:   <%= submit_tag "Go" %>
+
+    (eval):17:in `trial_balance_path'
+    app/views/trial_balance/show.html.erb:1
+    app/controllers/trial_balance_controller.rb:13:in `show'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:28:34) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 187ms (View: 62, DB: 0) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing TrialBalanceController#index (for 127.0.0.1 at 2010-07-26 00:29:17) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: show):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:32:42) [GET]
+  Parameters: {"id"=>""}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+
+ActionView::TemplateError (trial_balance_url failed to generate from {:action=>"show", :controller=>"trial_balance"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["trial_balance", :id] - are they all satisfied?) on line #1 of app/views/trial_balance/show.html.erb:
+1: <% form_tag trial_balance_path, :method => "get" do %>
+2:   <%= label_tag 'Month' %>:
+3:   <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
+4:   <%= submit_tag "Go" %>
+
+    (eval):17:in `trial_balance_path'
+    app/views/trial_balance/show.html.erb:1
+    app/controllers/trial_balance_controller.rb:13:in `show'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:33:02) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 172ms (View: 63, DB: 0) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing BalanceSheetController#show (for 127.0.0.1 at 2010-07-26 00:33:06) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (15.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (15.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/balance_sheet
+Rendering balance_sheet/show
+Rendered templates/entity/_back_to_tri_bal (0.0ms)
+Completed in 156ms (View: 16, DB: 30) | 200 OK [http://localhost/balance_sheet/show]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:33:07) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (15.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 266ms (View: 63, DB: 15) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing TrialBalanceController#index (for 127.0.0.1 at 2010-07-26 00:35:41) [GET]
+Rendering template within layouts/trial_balance
+Rendering trial_balance/index
+
+ActionView::TemplateError (trial_balance_url failed to generate from {:action=>"show", :controller=>"trial_balance"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["trial_balance", :id] - are they all satisfied?) on line #1 of app/views/trial_balance/index.html.erb:
+1: <% form_tag trial_balance_path, :method => "get" do %>
+2:   <%= label_tag 'Month' %>:
+3:   <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
+4:   <%= submit_tag "Go" %>
+
+    (eval):17:in `trial_balance_path'
+    app/views/trial_balance/index.html.erb:1
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#index (for 127.0.0.1 at 2010-07-26 00:36:05) [GET]
+Rendering template within layouts/trial_balance
+Rendering trial_balance/index
+
+ActionView::TemplateError (trial_balance_url failed to generate from {:action=>"show", :controller=>"trial_balance"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["trial_balance", :id] - are they all satisfied?) on line #1 of app/views/trial_balance/index.html.erb:
+1: <% form_tag trial_balance_path, :method => "get" do %>
+2:   <%= label_tag 'Month' %>:
+3:   <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
+4:   <%= submit_tag "Go" %>
+
+    (eval):17:in `trial_balance_path'
+    app/views/trial_balance/index.html.erb:1
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#index (for 127.0.0.1 at 2010-07-26 00:36:35) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (15.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/index
+
+ActionView::TemplateError (trial_balance_url failed to generate from {:action=>"show", :controller=>"trial_balance"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["trial_balance", :id] - are they all satisfied?) on line #1 of app/views/trial_balance/index.html.erb:
+1: <% form_tag trial_balance_path, :method => "get" do %>
+2:   <%= label_tag 'Month' %>:
+3:   <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
+4:   <%= submit_tag "Go" %>
+
+    (eval):17:in `trial_balance_path'
+    app/views/trial_balance/index.html.erb:1
+    app/controllers/trial_balance_controller.rb:13:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#index (for 127.0.0.1 at 2010-07-26 00:37:13) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/index
+
+ActionView::TemplateError (undefined local variable or method `trial_balances_path' for #<ActionView::Base:0x477eaf8>) on line #1 of app/views/trial_balance/index.html.erb:
+1: <% form_tag trial_balances_path, :method => "get" do %>
+2:   <%= label_tag 'Month' %>:
+3:   <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
+4:   <%= submit_tag "Go" %>
+
+    app/views/trial_balance/index.html.erb:1
+    app/controllers/trial_balance_controller.rb:13:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#index (for 127.0.0.1 at 2010-07-26 00:37:33) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/index
+
+ActionView::TemplateError (undefined local variable or method `trial_balances_path' for #<ActionView::Base:0x4a0afec>) on line #1 of app/views/trial_balance/index.html.erb:
+1: <% form_tag trial_balances_path, :method => "get" do %>
+2:   <%= label_tag 'Month' %>:
+3:   <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
+4:   <%= submit_tag "Go" %>
+
+    app/views/trial_balance/index.html.erb:1
+    app/controllers/trial_balance_controller.rb:13:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#index (for 127.0.0.1 at 2010-07-26 00:38:08) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/index
+
+ActionView::TemplateError (undefined local variable or method `trial_balances_path' for #<ActionView::Base:0x491afc4>) on line #1 of app/views/trial_balance/index.html.erb:
+1: <% form_tag trial_balances_path, :method => "get" do %>
+2:   <%= label_tag 'Month' %>:
+3:   <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
+4:   <%= submit_tag "Go" %>
+
+    app/views/trial_balance/index.html.erb:1
+    app/controllers/trial_balance_controller.rb:13:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:40:11) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 282ms (View: 94, DB: 0) | 200 OK [http://localhost/trial_balance/show]
+
+
+Processing BalanceSheetController#show (for 127.0.0.1 at 2010-07-26 00:40:13) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/balance_sheet
+Rendering balance_sheet/show
+Rendered templates/entity/_back_to_tri_bal (0.0ms)
+Completed in 234ms (View: 93, DB: 0) | 200 OK [http://localhost/balance_sheet/show]
+
+
+Processing TrialBalanceController#show (for 127.0.0.1 at 2010-07-26 00:40:15) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+Rendering template within layouts/trial_balance
+Rendering trial_balance/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+Completed in 344ms (View: 63, DB: 0) | 200 OK [http://localhost/trial_balance/show]
