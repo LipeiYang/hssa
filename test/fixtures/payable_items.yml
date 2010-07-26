@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+1:
+  id: 1
+  name: Due to A
+  seq: 1
+  visible: true
+
+2:
+  id: 2
+  name: Due to B
+  seq: 2
+  visible: true
+
+3:
+  id: 3
+  name: Due to C
+  seq: 3
+  visible: true

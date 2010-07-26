@@ -1,0 +1,24 @@
+<h1>Editing payable_item</h1>
+
+<% form_for(@payable_item) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :seq %><br />
+    <%= f.text_field :seq %>
+  </p>
+  <p>
+    <%= f.label :visible %><br />
+    <%= f.check_box :visible %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @payable_item %> |
+<%= link_to 'Back', payable_items_path %>

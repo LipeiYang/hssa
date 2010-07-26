@@ -1,7 +1,7 @@
 <% form_tag trial_balance_path, :method => "get" do %>
   <%= label_tag 'Month' %>:
-  <%= select_date @audit_month, :prefix => :audit_month, :discard_day=>true %>
-  <%= submit_tag "Go" %>
+  <%= select_date @audit_month, {:prefix => :audit_month, :discard_day=>true}, {:onchange =>"this.form.submit()"} %>
+  <!-- <%= submit_tag "Go" %> -->
 <% end %>
 
 <h1>TRIAL BALANCE</h1>
@@ -65,7 +65,7 @@
   </tr>
   <% @trial_balance.payables.to_a.each do |payable| %>
   <tr>
-    <td class="sht_left"><%=h payable.item %></td>
+    <td class="sht_left"><%=h payable.payable_item.name %></td>
     <td><%=f payable.dr %></td>
     <td><%=f payable.cr %></td>
   </tr>

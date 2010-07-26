@@ -1,5 +1,5 @@
   <p>
-    <%= f.label :item %><br />
-    <%= f.text_field :item %>
+    <%= f.label :payable_item %><br />
+    <%= f.collection_select :payable_item_id, PayableItem.all(:order=>"seq"), :id, :name%>
   </p>
  

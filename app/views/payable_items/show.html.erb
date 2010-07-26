@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @payable_item.name %>
+</p>
+
+<p>
+  <b>Seq:</b>
+  <%=h @payable_item.seq %>
+</p>
+
+<p>
+  <b>Visible:</b>
+  <%=h @payable_item.visible %>
+</p>
+
+
+<%= link_to 'Edit', edit_payable_item_path(@payable_item) %> |
+<%= link_to 'Back', payable_items_path %>

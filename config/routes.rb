@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :payable_items
+
   map.resource :balance_sheet
 
   map.resources :goods_costs

@@ -11,7 +11,7 @@
 <% @payables.each do |payable| %>
   <tr>
     <td><%=h payable.date %></td>
-    <td><%=h payable.item %></td>
+    <td><%=h payable.payable_item.name %></td>
     <td><%=h payable.dr %></td>
     <td><%=h payable.cr %></td>
     <td><%= link_to 'Show', payable %></td>

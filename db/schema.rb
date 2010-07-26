@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100724050423) do
+ActiveRecord::Schema.define(:version => 20100726123802) do
 
   create_table "banks", :force => true do |t|
     t.string   "name",       :null => false
@@ -77,11 +77,19 @@ ActiveRecord::Schema.define(:version => 20100724050423) do
     t.datetime "updated_at"
   end
 
+  create_table "payable_items", :force => true do |t|
+    t.string   "name"
+    t.integer  "seq"
+    t.boolean  "visible"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "payables", :force => true do |t|
-    t.date     "date",                        :null => false
-    t.string   "item",                        :null => false
-    t.decimal  "dr",         :default => 0.0, :null => false
-    t.decimal  "cr",         :default => 0.0, :null => false
+    t.date     "date",                             :null => false
+    t.integer  "payable_item_id",                  :null => false
+    t.decimal  "dr",              :default => 0.0, :null => false
+    t.decimal  "cr",              :default => 0.0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

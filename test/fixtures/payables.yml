@@ -3,41 +3,41 @@
 1:
   id: 1
   date: 2010-01-01
-  item: Due to A
+  payable_item_id: 1
   dr: 0
   cr: 11000
 
 2:
   id: 2
   date: 2010-01-01
-  item: Due to B
+  payable_item_id: 2
   dr: 0
   cr: 10000
 
 3:
   id: 3
   date: 2010-01-01
-  item: Due to C
+  payable_item_id: 3
   dr: 0
   cr: 0
 
 4:
   id: 4
   date: 2010-02-01
-  item: Due to A
+  payable_item_id: 1
   dr: 11000
   cr: 0
 
 5:
   id: 5
   date: 2010-02-01
-  item: Due to B
+  payable_item_id: 2
   dr: 0
   cr: 5000
 
 6:
   id: 6
   date: 2010-02-01
-  item: Due to C
+  payable_item_id: 3
   dr: 0
   cr: 5000

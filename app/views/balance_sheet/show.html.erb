@@ -2,12 +2,12 @@
 
 <table>
   
-  <tr>
+  <tr class="bd">
     <td class="bal_sht">ASSETS</td>
     <td></td>
   </tr>
 
-  <tr>
+  <tr class="bd">
     <td class="sht_left">CURRENT ASSETS</td>
     <td></td>
   </tr>
@@ -34,22 +34,82 @@
 
   <tr>
     <td class="sht_left">Gross property, plant and equipment - net</td>
-    <td><%=f @bal_sht.gross_property_plant_equipment_net %></td>
+    <td class="warn"><%=f @bal_sht.gross_property_plant_equipment_net %></td>
   </tr>
 
-  <tr class="alt">
+  <tr class="hl">
     <td class="sht_left">TOTAL ASSETS</td>
     <td><%=f @bal_sht.total_assets %></td>
   </tr>
 
-  <tr>
+  <tr class="bd">
     <td class="sht_left">LIABILITIES AND STOCKHOLDERS' EQUITY</td>
     <td></td>
   </tr>
 
   <tr>
-    <td class="sht_left">CURRENT LIABILITIES:</td>
+    <td class="sht_left">Accounts payables</td>
+    <td><%=f @bal_sht.accounts_payables %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Short-term Debt</td>
+    <td><%=f @bal_sht.short_term_debt %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Total current liabilities</td>
+    <td><%=f @bal_sht.total_current_liabilities %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Long term debt</td>
+    <td><%=f @bal_sht.long_term_debt %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Interest payables</td>
+    <td class="warn"><%=f @bal_sht.interest_payables %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Total liabilities</td>
+    <td><%=f @bal_sht.total_liabilities %></td>
+  </tr>
+
+  <tr class="bd">
+    <td class="sht_left">SHAREHOLDERS' EQUITY:</td>
     <td></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Share capital</td>
+    <td><%=f @bal_sht.share_capital %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Retained Earnings: Prior</td>
+    <td class="warn"><%=f @bal_sht.retained_earnings_prior %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Dividends paid</td>
+    <td class="warn"><%=f @bal_sht.dividends_paid %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Current year retained earnings</td>
+    <td class="warn"><%=f @bal_sht.current_year_retained_earnings %></td>
+  </tr>
+
+  <tr>
+    <td class="sht_left">Total stockholders' equity</td>
+    <td><%=f @bal_sht.total_stockholders_equity %></td>
+  </tr>
+
+  <tr class="hl">
+    <td class="sht_left">TOTAL LIABILITIES AND STOCKHOLDERS' EQUITY</td>
+    <td><%=f @bal_sht.total_liabilities_and_stockholders_equity %></td>
   </tr>
 
 </table>
