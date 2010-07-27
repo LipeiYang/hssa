@@ -20511,3 +20511,872 @@ Processing BalanceSheetsController#show to xls (for 127.0.0.1 at 2010-07-28 00:0
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
 Rendering balance_sheets/show
 Completed in 344ms (View: 16, DB: 0) | 200 OK [http://localhost/balance_sheet.xls]
+
+
+Processing TrialBalancesController#show (for 127.0.0.1 at 2010-07-28 00:13:04) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balances
+Rendering trial_balances/show
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+  [4;36;1mPayableItem Load (0.0ms)[0m   [0;1mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 1) [0m
+  [4;35;1mPayableItem Load (0.0ms)[0m   [0mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 2) [0m
+  [4;36;1mPayableItem Load (0.0ms)[0m   [0;1mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 3) [0m
+Completed in 547ms (View: 156, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing BalanceSheetsController#show (for 127.0.0.1 at 2010-07-28 00:13:06) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/balance_sheets_controller.rb:12:in `show'
+  app/controllers/balance_sheets_controller.rb:10:in `show'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BalanceSheetsController#show (for 127.0.0.1 at 2010-07-28 00:13:46) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (16.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/balance_sheets_controller.rb:12:in `show'
+  app/controllers/balance_sheets_controller.rb:10:in `show'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BalanceSheetsController#show (for 127.0.0.1 at 2010-07-28 00:14:15) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/balance_sheets
+Rendering balance_sheets/show
+DEPRECATION WARNING: formatted_balance_sheet_path() has been deprecated. Please pass format to the standard balance_sheet_path method instead. (called from _run_erb_app47views47balance_sheets47show46html46erb at C:/Documents and Settings/Leopard/My Documents/Aptana Studio 3 Workspace/hssa/app/views/balance_sheets/show.html.erb:119)
+Rendered templates/entity/_back_to_tri_bal (0.0ms)
+Completed in 422ms (View: 110, DB: 0) | 200 OK [http://localhost/balance_sheet]
+
+
+Processing BalanceSheetsController#show to xls (for 127.0.0.1 at 2010-07-28 00:14:19) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering balance_sheets/show
+Completed in 329ms (View: 63, DB: 0) | 200 OK [http://localhost/balance_sheet.xls]
+
+
+Processing BalanceSheetsController#show to xls (for 127.0.0.1 at 2010-07-28 00:14:36) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering balance_sheets/show
+Completed in 328ms (View: 0, DB: 0) | 200 OK [http://localhost/balance_sheet.xls]
+
+
+Processing TrialBalancesController#show (for 127.0.0.1 at 2010-07-28 00:15:52) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balances
+Rendering trial_balances/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (16.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+  [4;35;1mPayableItem Load (0.0ms)[0m   [0mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 1) [0m
+  [4;36;1mPayableItem Load (0.0ms)[0m   [0;1mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 2) [0m
+  [4;35;1mPayableItem Load (0.0ms)[0m   [0mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 3) [0m
+Completed in 625ms (View: 249, DB: 16) | 200 OK [http://localhost/]
+
+
+Processing BalanceSheetsController#show (for 127.0.0.1 at 2010-07-28 00:15:54) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (16.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/balance_sheets
+Rendering balance_sheets/show
+DEPRECATION WARNING: formatted_balance_sheet_path() has been deprecated. Please pass format to the standard balance_sheet_path method instead. (called from _run_erb_app47views47balance_sheets47show46html46erb at C:/Documents and Settings/Leopard/My Documents/Aptana Studio 3 Workspace/hssa/app/views/balance_sheets/show.html.erb:119)
+Rendered templates/entity/_back_to_tri_bal (0.0ms)
+Completed in 266ms (View: 16, DB: 16) | 200 OK [http://localhost/balance_sheet]
+
+
+Processing TrialBalancesController#show (for 127.0.0.1 at 2010-07-28 00:15:56) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balances
+Rendering trial_balances/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+  [4;35;1mPayableItem Load (0.0ms)[0m   [0mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 1) [0m
+  [4;36;1mPayableItem Load (0.0ms)[0m   [0;1mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 2) [0m
+  [4;35;1mPayableItem Load (0.0ms)[0m   [0mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 3) [0m
+Completed in 328ms (View: 78, DB: 0) | 200 OK [http://localhost/trial_balance]
+
+
+Processing BalanceSheetsController#show (for 127.0.0.1 at 2010-07-28 00:15:57) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-01-01') [0m
+  [4;36;1mReceivable Load (16.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-01-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-01-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-01-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-01-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-01-01') LIMIT 1[0m
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/balance_sheets
+Rendering balance_sheets/show
+DEPRECATION WARNING: formatted_balance_sheet_path() has been deprecated. Please pass format to the standard balance_sheet_path method instead. (called from _run_erb_app47views47balance_sheets47show46html46erb at C:/Documents and Settings/Leopard/My Documents/Aptana Studio 3 Workspace/hssa/app/views/balance_sheets/show.html.erb:119)
+Rendered templates/entity/_back_to_tri_bal (0.0ms)
+Completed in 250ms (View: 16, DB: 16) | 200 OK [http://localhost/balance_sheet]
+
+
+Processing TrialBalancesController#show (for 127.0.0.1 at 2010-07-28 00:15:59) [GET]
+  [4;35;1mCash Load (0.0ms)[0m   [0mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mDeposit Load (0.0ms)[0m   [0;1mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;35;1mReceivable Load (0.0ms)[0m   [0mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;36;1mInventory Load (0.0ms)[0m   [0;1mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;35;1mPayable Load (0.0ms)[0m   [0mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;36;1mShortTermDebt Load (0.0ms)[0m   [0;1mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mPaidInCapital Load (0.0ms)[0m   [0mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mSale Load (0.0ms)[0m   [0;1mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mGoodsCost Load (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balances
+Rendering trial_balances/show
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+  [4;35;1mPayableItem Load (0.0ms)[0m   [0mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 1) [0m
+  [4;36;1mPayableItem Load (0.0ms)[0m   [0;1mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 2) [0m
+  [4;35;1mPayableItem Load (0.0ms)[0m   [0mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 3) [0m
+Completed in 281ms (View: 78, DB: 0) | 200 OK [http://localhost/trial_balance]
