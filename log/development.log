@@ -18983,3 +18983,45 @@ Processing BalanceSheetsController#show to xls (for 127.0.0.1 at 2010-07-27 22:3
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
 Rendering balance_sheets/show
 Completed in 360ms (View: 16, DB: 0) | 200 OK [http://localhost/balance_sheet.xls]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-27 22:36:35) [GET]
+
+ActionController::RoutingError (No route matches "/orders" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrialBalancesController#show (for 127.0.0.1 at 2010-07-27 22:36:39) [GET]
+  [4;36;1mCash Load (0.0ms)[0m   [0;1mSELECT * FROM "cashes" WHERE ("cashes"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mDeposit Load (0.0ms)[0m   [0mSELECT * FROM "deposits" WHERE ("deposits"."date" = '2010-02-01') [0m
+  [4;36;1mReceivable Load (0.0ms)[0m   [0;1mSELECT * FROM "receivables" WHERE ("receivables"."date" = '2010-02-01') [0m
+  [4;35;1mInventory Load (0.0ms)[0m   [0mSELECT * FROM "inventories" WHERE ("inventories"."date" = '2010-02-01') [0m
+  [4;36;1mPayable Load (0.0ms)[0m   [0;1mSELECT * FROM "payables" WHERE ("payables"."date" = '2010-02-01') [0m
+  [4;35;1mShortTermDebt Load (0.0ms)[0m   [0mSELECT * FROM "short_term_debts" WHERE ("short_term_debts"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mPaidInCapital Load (0.0ms)[0m   [0;1mSELECT * FROM "paid_in_capitals" WHERE ("paid_in_capitals"."date" = '2010-02-01') LIMIT 1[0m
+  [4;35;1mSale Load (0.0ms)[0m   [0mSELECT * FROM "sales" WHERE ("sales"."date" = '2010-02-01') LIMIT 1[0m
+  [4;36;1mGoodsCost Load (0.0ms)[0m   [0;1mSELECT * FROM "goods_costs" WHERE ("goods_costs"."date" = '2010-02-01') LIMIT 1[0m
+Rendering template within layouts/trial_balances
+Rendering trial_balances/show
+  [4;35;1mBank Load (0.0ms)[0m   [0mSELECT * FROM "banks" WHERE ("banks"."id" = 1) [0m
+  [4;36;1mBank Load (0.0ms)[0m   [0;1mSELECT * FROM "banks" WHERE ("banks"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+  [4;36;1mMaterial Load (0.0ms)[0m   [0;1mSELECT * FROM "materials" WHERE ("materials"."id" = 1) [0m
+  [4;35;1mMaterial Load (0.0ms)[0m   [0mSELECT * FROM "materials" WHERE ("materials"."id" = 2) [0m
+  [4;36;1mPayableItem Load (16.0ms)[0m   [0;1mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 1) [0m
+  [4;35;1mPayableItem Load (0.0ms)[0m   [0mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 2) [0m
+  [4;36;1mPayableItem Load (0.0ms)[0m   [0;1mSELECT * FROM "payable_items" WHERE ("payable_items"."id" = 3) [0m
+Completed in 281ms (View: 140, DB: 16) | 200 OK [http://localhost/]

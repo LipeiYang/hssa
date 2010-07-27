@@ -4,7 +4,7 @@ class TrialBalancesController < ApplicationController
       session[:audit_month] = str_civil params[:audit_month][:year], params[:audit_month][:month], params[:audit_month][:day]
     end
     if session[:audit_month] == nil
-      session[:audit_month] = Date.civil(Date.today.year,Date.today.month) # find a better way
+      session[:audit_month] = Date.civil(2010,2) # find a better way
     end
     @audit_month = session[:audit_month]
     
