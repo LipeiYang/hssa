@@ -1,4 +1,4 @@
-class BalanceSheetController < ApplicationController
+class BalanceSheetsController < ApplicationController
 
   # GET /balance_sheets/1
   # GET /balance_sheets/1.xml
@@ -9,7 +9,7 @@ class BalanceSheetController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @balance_sheet }
+      format.xls
     end
   end
 

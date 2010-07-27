@@ -1,4 +1,4 @@
-class TrialBalanceController < ApplicationController
+class TrialBalancesController < ApplicationController
   def show
     if params[:audit_month]!=nil
       session[:audit_month] = str_civil params[:audit_month][:year], params[:audit_month][:month], params[:audit_month][:day]
